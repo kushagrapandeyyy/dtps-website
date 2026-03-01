@@ -250,7 +250,6 @@ export default function ExpertGuidanceSection() {
       ref={sectionRef}
       className={`relative w-full overflow-hidden rounded-[24px] bg-[#005A5A] ${epilogue.className}`}
     >
-      {/* subtle background leaves */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
         <div className="absolute left-[-10px] top-[10px] h-[74px] w-[34px] rounded-full border border-white/30" />
         <div className="absolute left-[14px] top-[40px] h-[44px] w-[20px] rounded-full border border-white/30" />
@@ -259,7 +258,6 @@ export default function ExpertGuidanceSection() {
       </div>
 
       <div className="mx-auto max-w-[1200px] px-4 md:px-8 lg:px-10">
-        {/* header */}
         <div className="pt-6 md:pt-[60px] flex flex-col items-center gap-[6px]">
           <h2 className="text-center text-[#FBFBFB] text-[28px] leading-[1.05] md:text-[32px] md:leading-[36px] font-bold max-w-[330px] md:max-w-none">
             You are under Expert&apos;s Guidance
@@ -269,22 +267,18 @@ export default function ExpertGuidanceSection() {
           </p>
         </div>
 
-        {/* top layout */}
         <div className="mt-8 md:mt-[68px] flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-8">
-          {/* mobile founder first */}
           <div
             className={`relative order-1 lg:order-2 w-full lg:w-[283px] h-[500px] sm:h-[560px] lg:h-[547px] transition-all duration-700 delay-150 ${
               isVisible ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
             }`}
           >
-            {/* mobile top Dietitian */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 lg:hidden">
               <div className={`${inter.className} text-white text-[28px] tracking-[0.22em] font-normal`}>
                 Dietitian
               </div>
             </div>
 
-            {/* mobile vertical name */}
             <div className="absolute right-[28px] top-[42px] z-20 lg:hidden">
               <div
                 className={`${poppins.className} font-bold leading-none tracking-[0.1em]`}
@@ -295,15 +289,18 @@ export default function ExpertGuidanceSection() {
               </div>
             </div>
 
-            {/* desktop labels */}
             <div className="hidden lg:block absolute left-[116px] top-0 z-20">
               <div className={`${inter.className} text-white text-[29.68px] leading-none tracking-[0.214em] font-normal`}>
                 Dietitian
               </div>
             </div>
 
-            <div className="hidden lg:block absolute right-[-2px] top-[38px] origin-top-left rotate-90 z-20">
-              <div className={`${poppins.className} text-center leading-none tracking-[0.1em] font-bold`}>
+            {/* DESKTOP POONAM SAGAR ON RIGHT SIDE OF IMAGE */}
+            <div className="hidden lg:block absolute right-[-8px] top-[38px] z-20">
+              <div
+                className={`${poppins.className} text-center leading-none tracking-[0.1em] font-bold`}
+                style={{ writingMode: "vertical-rl" }}
+              >
                 <span className="text-[#3AB1A0] text-[42.4px]">POONAM </span>
                 <span className="text-[#FF850B] text-[42.4px]">SAGAR</span>
               </div>
@@ -322,7 +319,6 @@ export default function ExpertGuidanceSection() {
             </div>
           </div>
 
-          {/* text + badges */}
           <div
             className={`order-2 lg:order-1 w-full max-w-[589px] transition-all duration-700 ${
               isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
@@ -370,9 +366,7 @@ export default function ExpertGuidanceSection() {
           </div>
         </div>
 
-        {/* media cards */}
         <div className="mt-[40px] md:mt-[76px]">
-          {/* desktop static */}
           <div className="hidden md:flex items-center justify-center gap-8">
             {mediaCards.map((card, index) => (
               <div
@@ -406,7 +400,6 @@ export default function ExpertGuidanceSection() {
             ))}
           </div>
 
-          {/* mobile auto carousel */}
           <div className="md:hidden relative overflow-hidden">
             <div className="media-track-mobile flex w-max gap-4">
               {[...mediaCards, ...mediaCards].map((card, index) => (
@@ -440,7 +433,6 @@ export default function ExpertGuidanceSection() {
           </div>
         </div>
 
-        {/* logos auto carousel both desktop/mobile */}
         <div className="mt-[38px] md:mt-[58px] relative left-1/2 -translate-x-1/2 w-screen overflow-hidden">
           <div
             className="relative overflow-hidden"
@@ -461,7 +453,6 @@ export default function ExpertGuidanceSection() {
           </div>
         </div>
 
-        {/* counters */}
         <div className="mt-[40px] md:mt-[88px] pb-[18px] md:pb-[48px]">
           <div className="mx-auto grid max-w-[845px] grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             <CounterBox value={counters.rating.toFixed(1)} label="Google Rating" />
