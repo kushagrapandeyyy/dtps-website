@@ -122,232 +122,667 @@ export default function HomePage() {
       </section>
       </div>
 
-      {/* How It Work Section */}
+        {/* How It Work Section */}
       <div className="section-wrapper">
-      <section className="bg-gradient-to-b from-[#0b4c4c] to-[#073535] pt-14 md:pt-20 pb-44 md:pb-56 px-4 md:px-8 rounded-[30px]">
-        <div className="max-w-[1200px] mx-auto">
-          {/* Header row */}
-          <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 mb-14 md:mb-16">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-[#ff9100] text-xl">✦</span>
-                <span className="text-[#ff9100] font-semibold text-base italic">How It Work</span>
-              </div>
-              <h2 className="text-[1.8rem] md:text-[2.5rem] font-bold text-white leading-tight italic">
-                Step-by-step guide to<br />your healthy journey
-              </h2>
-            </div>
-            <p className="max-w-[420px] text-white/80 text-sm md:text-[15px] leading-relaxed md:pt-8">
-              Achieving your health goals has never been easier. Our step-by-step approach provides personalized guidance, actionable strategies, and ongoing support.
-            </p>
-          </div>
-
-          {/* 5 Steps with connectors */}
-          <div className="relative">
-            {/* Desktop: horizontal row with connectors */}
-            <div className="hidden md:grid grid-cols-5 gap-0 relative">
-              {/* Dotted connector line across all icons */}
-              <div className="absolute top-[40px] left-[10%] right-[10%] h-0 border-t-2 border-dashed border-white/30 z-0" />
-
-              {/* Step 1 */}
-              <div className="text-center relative z-10 px-2">
-                <div className="inline-block mb-6 relative">
-                  <div className="w-[80px] h-[80px] border-2 border-white/30 rounded-full flex items-center justify-center bg-[#0b4c4c] relative z-10">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                      <circle cx="9" cy="7" r="3" />
-                      <path d="M9 13a5 5 0 0 0-5 5h10a5 5 0 0 0-5-5z" />
-                      <path d="M17 11l2 2 4-4" stroke="#ff9100" />
-                    </svg>
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-7 h-7 bg-[#ff9100] rounded-full flex items-center justify-center text-white text-xs font-bold z-20">1</div>
-                </div>
-                <h3 className="text-white font-bold text-[15px] mb-2 leading-snug">Choose Your Plan</h3>
-                <p className="text-white/70 text-[12.5px] leading-relaxed">Select a diet plan based on your goal, health condition, and duration.</p>
-              </div>
-
-              {/* Step 2 */}
-              <div className="text-center relative z-10 px-2">
-                <div className="inline-block mb-6 relative">
-                  <div className="w-[80px] h-[80px] border-2 border-white/30 rounded-full flex items-center justify-center bg-[#0b4c4c] relative z-10">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                      <circle cx="8" cy="7" r="3" />
-                      <path d="M8 13a5 5 0 0 0-4 4h8" />
-                      <circle cx="17" cy="7" r="3" />
-                      <path d="M17 13a5 5 0 0 1 4 4h-8" />
-                      <path d="M12 17v3" stroke="#ff9100" />
-                    </svg>
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-7 h-7 bg-[#ff9100] rounded-full flex items-center justify-center text-white text-xs font-bold z-20">2</div>
-                </div>
-                <h3 className="text-white font-bold text-[15px] mb-2 leading-snug">Health Counsellor Connect</h3>
-                <p className="text-white/70 text-[12.5px] leading-relaxed">Our health counsellor connects with you to understand your lifestyle and concerns.</p>
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center relative z-10 px-2">
-                <div className="inline-block mb-6 relative">
-                  <div className="w-[80px] h-[80px] border-2 border-white/30 rounded-full flex items-center justify-center bg-[#0b4c4c] relative z-10">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                      <path d="M3 5h18v14H3z" rx="2" />
-                      <circle cx="9" cy="12" r="2" />
-                      <circle cx="15" cy="12" r="2" />
-                      <path d="M9 12h6" strokeDasharray="2 2" stroke="#ff9100" />
-                    </svg>
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-7 h-7 bg-[#ff9100] rounded-full flex items-center justify-center text-white text-xs font-bold z-20">3</div>
-                </div>
-                <h3 className="text-white font-bold text-[15px] mb-2 leading-snug">Dietitian Assessment Call</h3>
-                <p className="text-white/70 text-[12.5px] leading-relaxed">Your assigned dietitian speaks with you to understand your lifestyle, food choices and health goals before planning your diet.</p>
-              </div>
-
-              {/* Step 4 */}
-              <div className="text-center relative z-10 px-2">
-                <div className="inline-block mb-6 relative">
-                  <div className="w-[80px] h-[80px] border-2 border-white/30 rounded-full flex items-center justify-center bg-[#0b4c4c] relative z-10">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                      <rect x="4" y="3" width="16" height="18" rx="2" />
-                      <path d="M8 7h8" />
-                      <path d="M8 11h8" />
-                      <path d="M8 15h5" />
-                      <path d="M15 15l2 2 4-4" stroke="#ff9100" />
-                    </svg>
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-7 h-7 bg-[#ff9100] rounded-full flex items-center justify-center text-white text-xs font-bold z-20">4</div>
-                </div>
-                <h3 className="text-white font-bold text-[15px] mb-2 leading-snug">Personalised Plan Delivery</h3>
-                <p className="text-white/70 text-[12.5px] leading-relaxed">Your customised diet plan is shared on OUR APP within 24 hours of the assessment.</p>
-              </div>
-
-              {/* Step 5 */}
-              <div className="text-center relative z-10 px-2">
-                <div className="inline-block mb-6 relative">
-                  <div className="w-[80px] h-[80px] border-2 border-white/30 rounded-full flex items-center justify-center bg-[#0b4c4c] relative z-10">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                      <path d="M12 20V10" />
-                      <path d="M6 20v-6" />
-                      <path d="M18 20v-4" />
-                      <circle cx="12" cy="7" r="2" stroke="#ff9100" />
-                      <path d="M9 4l3 3 3-3" stroke="#ff9100" />
-                    </svg>
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-7 h-7 bg-[#ff9100] rounded-full flex items-center justify-center text-white text-xs font-bold z-20">5</div>
-                </div>
-                <h3 className="text-white font-bold text-[15px] mb-2 leading-snug">Follow-Ups &amp; Tracking</h3>
-                <p className="text-white/70 text-[12.5px] leading-relaxed">Weekly or requirement-based follow-ups to track progress and make timely adjustments.</p>
-              </div>
-            </div>
-
-            {/* Mobile: stacked layout */}
-            <div className="md:hidden space-y-8">
-              {[
-                { num: 1, title: 'Choose Your Plan', desc: 'Select a diet plan based on your goal, health condition, and duration.', icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><circle cx="9" cy="7" r="3" /><path d="M9 13a5 5 0 0 0-5 5h10a5 5 0 0 0-5-5z" /><path d="M17 11l2 2 4-4" stroke="#ff9100" /></svg>
-                )},
-                { num: 2, title: 'Health Counsellor Connect', desc: 'Our health counsellor connects with you to understand your lifestyle and concerns.', icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><circle cx="8" cy="7" r="3" /><path d="M8 13a5 5 0 0 0-4 4h8" /><circle cx="17" cy="7" r="3" /><path d="M17 13a5 5 0 0 1 4 4h-8" /></svg>
-                )},
-                { num: 3, title: 'Dietitian Assessment Call', desc: 'Your assigned dietitian speaks with you to understand your lifestyle, food choices and health goals before planning your diet.', icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><path d="M3 5h18v14H3z" /><circle cx="9" cy="12" r="2" /><circle cx="15" cy="12" r="2" /></svg>
-                )},
-                { num: 4, title: 'Personalised Plan Delivery', desc: 'Your customised diet plan is shared on OUR APP within 24 hours of the assessment.', icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M8 7h8" /><path d="M8 11h8" /><path d="M8 15h5" /></svg>
-                )},
-                { num: 5, title: 'Follow-Ups & Tracking', desc: 'Weekly or requirement-based follow-ups to track progress and make timely adjustments.', icon: (
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5"><path d="M12 20V10" /><path d="M6 20v-6" /><path d="M18 20v-4" /></svg>
-                )},
-              ].map((step) => (
-                <div key={step.num} className="flex items-start gap-4">
-                  <div className="relative flex-shrink-0">
-                    <div className="w-16 h-16 border-2 border-white/30 rounded-full flex items-center justify-center bg-[#0b4c4c]">
-                      {step.icon}
+        <section className="relative w-full">
+          {/* DESKTOP */}
+          <div className="hidden md:block relative">
+            <div
+              className="relative overflow-hidden rounded-[30px] bg-[#014E4E] px-[52px] pt-[74px] pb-[210px]"
+              style={{
+                backgroundImage: `
+                  repeating-radial-gradient(
+                    circle at 0% 30%,
+                    rgba(255,255,255,0.06) 0px,
+                    rgba(255,255,255,0.06) 1px,
+                    transparent 1px,
+                    transparent 32px
+                  ),
+                  linear-gradient(180deg, #015a5a 0%, #014E4E 100%)
+                `,
+              }}
+            >
+              <div className="mx-auto max-w-[1202px]">
+                {/* Header */}
+                <div className="flex items-start justify-between gap-10 px-[128px]">
+                  <div className="max-w-[430px]">
+                    <div className="mb-3 flex items-center gap-2">
+                      <span className="text-[#FF850B] text-[14px] leading-none">✦</span>
+                      <span className="text-[14px] font-semibold leading-[1] text-white">
+                        How It Work
+                      </span>
                     </div>
-                    <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#ff9100] rounded-full flex items-center justify-center text-white text-[10px] font-bold">{step.num}</div>
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-sm mb-1">{step.title}</h3>
-                    <p className="text-white/70 text-xs leading-relaxed">{step.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      </div>
 
-      {/* Appointment Section - Overlapping */}
-      <div className="section-wrapper">
-      <section className="bg-white px-4 md:px-8 -mt-28 md:-mt-36 relative z-10 rounded-[30px]">
-        <div className="max-w-[1100px] mx-auto bg-white rounded-[20px] md:rounded-[30px] p-5 md:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.1)]">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-            <div className="w-full lg:flex-1">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-[#ff9100] text-xl">✦</span>
-                <span className="text-teal-600 font-semibold text-base">Appointment</span>
+                    <h2 className="text-[56px] font-bold leading-[1.08] tracking-[-0.02em] text-white">
+                      Step-by-step guide to
+                      <br />
+                      your healthy journey
+                    </h2>
+                  </div>
+
+                  <p className="max-w-[415px] pt-8 text-[15px] leading-[1.75] text-white/90">
+                    Achieving your health goals has never been easier. Our
+                    step-by-step approach provides personalized guidance,
+                    actionable strategies, and ongoing support.
+                  </p>
+                </div>
+
+                {/* Steps */}
+                <div className="relative mt-[78px] px-[88px]">
+                  <div className="pointer-events-none absolute left-[120px] right-[120px] top-[31px] border-t border-dashed border-white/45" />
+
+                  <div className="grid grid-cols-5 gap-6">
+                    {/* Step 1 */}
+                    <div className="relative">
+                      <div className="relative mb-5 h-[72px]">
+                        <div className="relative z-[2] flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <circle cx="15.5" cy="5.7" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <circle cx="4.9" cy="24.3" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <circle cx="15.5" cy="24.3" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <circle cx="26.1" cy="24.3" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <path
+                              d="M15.5 8.8V16.2M8 20.9H23M4.9 21.2V17.2H26.1V21.2"
+                              stroke="white"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div className="absolute left-[52px] top-[22px] z-[3] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#FF850B] text-[10px] font-semibold text-white">
+                          1
+                        </div>
+
+                        <div className="absolute right-[-8px] top-[28px] z-[2] text-white/80">
+                          <svg width="16" height="8" viewBox="0 0 16 8" fill="none" aria-hidden="true">
+                            <path
+                              d="M1 4H14M14 4L11 1M14 4L11 7"
+                              stroke="white"
+                              strokeOpacity="0.85"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                        Choose Your Plan
+                      </h3>
+                      <p className="mt-2 max-w-[170px] text-[12.5px] leading-[1.6] text-white/85">
+                        Select a diet plan based on your goal, health condition,
+                        and duration.
+                      </p>
+                    </div>
+
+                    {/* Step 2 */}
+                    <div className="relative">
+                      <div className="relative mb-5 h-[72px]">
+                        <div className="relative z-[2] flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <path
+                              d="M10 15.2V11.2C10 8 12.5 5.5 15.5 5.5C18.5 5.5 21 8 21 11.2V15.2"
+                              stroke="white"
+                              strokeWidth="1.2"
+                            />
+                            <rect x="7.4" y="13.5" width="4.2" height="7.2" rx="2.1" stroke="white" strokeWidth="1.2" />
+                            <rect x="19.4" y="13.5" width="4.2" height="7.2" rx="2.1" stroke="white" strokeWidth="1.2" />
+                            <path
+                              d="M14 22.6H17.2C18.7 22.6 19.9 21.4 19.9 19.9"
+                              stroke="white"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                            />
+                            <rect x="13.1" y="21.2" width="3.8" height="2.6" rx="1.3" stroke="white" strokeWidth="1.2" />
+                          </svg>
+                        </div>
+
+                        <div className="absolute left-[52px] top-[22px] z-[3] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#FF850B] text-[10px] font-semibold text-white">
+                          2
+                        </div>
+
+                        <div className="absolute right-[-8px] top-[28px] z-[2] text-white/80">
+                          <svg width="16" height="8" viewBox="0 0 16 8" fill="none" aria-hidden="true">
+                            <path
+                              d="M1 4H14M14 4L11 1M14 4L11 7"
+                              stroke="white"
+                              strokeOpacity="0.85"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                        Health Counsellor Connect
+                      </h3>
+                      <p className="mt-2 max-w-[170px] text-[12.5px] leading-[1.6] text-white/85">
+                        Our health counsellor connects with you to understand
+                        your lifestyle and concerns.
+                      </p>
+                    </div>
+
+                    {/* Step 3 */}
+                    <div className="relative">
+                      <div className="relative mb-5 h-[72px]">
+                        <div className="relative z-[2] flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="11.5" r="4.2" stroke="white" strokeWidth="1.1" />
+                            <path
+                              d="M5.5 23.5C6.5 19.7 8.9 18 12 18C15.1 18 17.5 19.7 18.5 23.5"
+                              stroke="white"
+                              strokeWidth="1.1"
+                              strokeLinecap="round"
+                            />
+                            <rect x="18.7" y="8.2" width="7.4" height="10.2" rx="1.4" stroke="white" strokeWidth="1.1" />
+                            <path d="M20.6 11.2H24.4M20.6 14.2H24.4" stroke="white" strokeWidth="1.1" strokeLinecap="round" />
+                            <path d="M18.7 23.5H26.2" stroke="white" strokeWidth="1.1" strokeLinecap="round" />
+                          </svg>
+                        </div>
+
+                        <div className="absolute left-[52px] top-[22px] z-[3] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#FF850B] text-[10px] font-semibold text-white">
+                          3
+                        </div>
+
+                        <div className="absolute right-[-8px] top-[28px] z-[2] text-white/80">
+                          <svg width="16" height="8" viewBox="0 0 16 8" fill="none" aria-hidden="true">
+                            <path
+                              d="M1 4H14M14 4L11 1M14 4L11 7"
+                              stroke="white"
+                              strokeOpacity="0.85"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                        Dietitian Assessment Call
+                      </h3>
+                      <p className="mt-2 max-w-[170px] text-[12.5px] leading-[1.6] text-white/85">
+                        Your assigned dietitian speaks with you to understand
+                        your lifestyle, food choices and health goals before
+                        planning your diet.
+                      </p>
+                    </div>
+
+                    {/* Step 4 */}
+                    <div className="relative">
+                      <div className="relative mb-5 h-[72px]">
+                        <div className="relative z-[2] flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <rect x="8.2" y="4.8" width="14.6" height="21.4" rx="1.8" stroke="white" strokeWidth="1.2" />
+                            <path d="M12 9.7H19" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
+                            <rect x="11.2" y="12.6" width="2.5" height="2.5" stroke="white" strokeWidth="1.1" />
+                            <rect x="11.2" y="17.2" width="2.5" height="2.5" stroke="white" strokeWidth="1.1" />
+                            <path d="M15.4 13.8H19.6M15.4 18.4H19.6" stroke="white" strokeWidth="1.1" strokeLinecap="round" />
+                          </svg>
+                        </div>
+
+                        <div className="absolute left-[52px] top-[22px] z-[3] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#FF850B] text-[10px] font-semibold text-white">
+                          4
+                        </div>
+
+                        <div className="absolute right-[-8px] top-[28px] z-[2] text-white/80">
+                          <svg width="16" height="8" viewBox="0 0 16 8" fill="none" aria-hidden="true">
+                            <path
+                              d="M1 4H14M14 4L11 1M14 4L11 7"
+                              stroke="white"
+                              strokeOpacity="0.85"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                        Personalised Plan Delivery
+                      </h3>
+                      <p className="mt-2 max-w-[170px] text-[12.5px] leading-[1.6] text-white/85">
+                        Your customised diet plan is shared on OUR APP within 24
+                        hours of the assessment.
+                      </p>
+                    </div>
+
+                    {/* Step 5 */}
+                    <div className="relative">
+                      <div className="relative mb-5 h-[72px]">
+                        <div className="relative z-[2] flex h-[64px] w-[64px] items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <rect x="5.2" y="19.2" width="20.6" height="5.4" stroke="white" strokeWidth="1.1" />
+                            <path d="M8.5 19.1V12.7M15.5 19.1V9.3M22.5 19.1V14.8" stroke="white" strokeWidth="1.1" />
+                            <path d="M7.2 10.1L10.4 7.8L14.1 10.1L18.1 6.8L23.6 9.5" stroke="white" strokeWidth="1.1" />
+                            <path d="M13.8 5.1H17.2V8.5" stroke="white" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </div>
+
+                        <div className="absolute left-[52px] top-[22px] z-[3] flex h-[20px] w-[20px] items-center justify-center rounded-full bg-[#FF850B] text-[10px] font-semibold text-white">
+                          5
+                        </div>
+                      </div>
+
+                      <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                        Follow-Ups &amp; Tracking
+                      </h3>
+                      <p className="mt-2 max-w-[170px] text-[12.5px] leading-[1.6] text-white/85">
+                        Weekly or requirement-based follow-ups to track progress
+                        and make timely adjustments.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h2 className="text-[1.75rem] md:text-[2.5rem] font-bold text-gray-900 leading-tight mb-4">
-                Make appointment
-              </h2>
-              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
-                Easy scheduling for a personalized health coaching session. Take the first step towards better health today!
-              </p>
-              <Image 
-                src="/img/b29c961c86fe88546c6e3c94c7c1fdaee4e4c518.png"
-                alt="Dietitian consultation"
-                width={450}
-                height={300}
-                className="rounded-2xl object-cover w-full max-w-[450px] hidden md:block"
-              />
             </div>
-            <div className="w-full lg:flex-1">
-              <form className="flex flex-col gap-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <input 
-                    type="text" 
-                    placeholder="First Name" 
-                    className="w-full p-3 md:p-4 border border-gray-300 rounded-lg text-sm md:text-base outline-none focus:border-teal-500"
-                  />
-                  <input 
-                    type="text" 
-                    placeholder="Last Name" 
-                    className="w-full p-3 md:p-4 border border-gray-300 rounded-lg text-sm md:text-base outline-none focus:border-teal-500"
-                  />
+
+            {/* Overlap appointment card */}
+            <div className="relative z-10 mx-auto -mt-[178px] max-w-[840px]">
+              <div className="rounded-[22px] border border-[#F1F1F1] bg-white px-[66px] py-[66px] shadow-[0_0_20px_rgba(0,0,0,0.05)]">
+                <div className="flex items-start gap-[40px]">
+                  {/* left */}
+                  <div className="w-[334px] flex-shrink-0">
+                    <div className="mb-4 flex items-center gap-2">
+                      <span className="text-[#FF850B] text-[14px] leading-none">✦</span>
+                      <span className="text-[14px] font-semibold text-[#014E4E]">
+                        Appointment
+                      </span>
+                    </div>
+
+                    <h3 className="text-[54px] font-bold leading-[1.02] tracking-[-0.03em] text-[#1E1E1E]">
+                      Make appointment
+                    </h3>
+
+                    <p className="mt-4 text-[14px] leading-[1.7] text-[#828283]">
+                      Easy scheduling for a personalized health coaching session.
+                      Take the first step towards better health today!
+                    </p>
+
+                    <div className="mt-7 overflow-hidden rounded-[20px]">
+                      <Image
+                        src="/img/b29c961c86fe88546c6e3c94c7c1fdaee4e4c518.png"
+                        alt="Dietitian consultation"
+                        width={334}
+                        height={185}
+                        className="h-[185px] w-full object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  {/* right */}
+                  <div className="flex-1 pt-6">
+                    <form className="space-y-[15px]">
+                      <div className="grid grid-cols-2 gap-[20px]">
+                        <input
+                          type="text"
+                          placeholder="First Name"
+                          className="h-[50px] w-full rounded-[10px] border border-[#F1F1F1] bg-white px-4 text-[14px] text-[#828283] outline-none placeholder:text-[#828283]"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Last Name"
+                          className="h-[50px] w-full rounded-[10px] border border-[#F1F1F1] bg-white px-4 text-[14px] text-[#828283] outline-none placeholder:text-[#828283]"
+                        />
+                      </div>
+
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        className="h-[50px] w-full rounded-[10px] border border-[#F1F1F1] bg-white px-4 text-[14px] text-[#828283] outline-none placeholder:text-[#828283]"
+                      />
+
+                      <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        className="h-[50px] w-full rounded-[10px] border border-[#F1F1F1] bg-white px-4 text-[14px] text-[#828283] outline-none placeholder:text-[#828283]"
+                      />
+
+                      <div className="grid grid-cols-2 gap-[20px]">
+                        <div className="relative">
+                          <select className="h-[50px] w-full appearance-none rounded-[10px] border border-[#F1F1F1] bg-white px-4 text-[14px] text-[#828283] outline-none">
+                            <option>Service</option>
+                            <option>Weight Management</option>
+                            <option>PCOD/PCOS</option>
+                            <option>Therapeutic Diet</option>
+                            <option>Wedding Program</option>
+                          </select>
+                          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#343A40]">
+                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                              <path
+                                d="M2 3L7 8L12 3"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <input
+                          type="date"
+                          className="h-[50px] w-full rounded-[10px] border border-[#F1F1F1] bg-white px-4 text-[14px] text-[#828283] outline-none"
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="mt-3 inline-flex h-[50px] min-w-[180px] items-center justify-center rounded-full bg-[#FF850B] px-7 text-[14px] font-bold text-white transition hover:opacity-95"
+                      >
+                        Book An Appointment
+                      </button>
+                    </form>
+                  </div>
                 </div>
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  className="w-full p-3 md:p-4 border border-gray-300 rounded-lg text-sm md:text-base outline-none focus:border-teal-500"
-                />
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
-                  className="w-full p-3 md:p-4 border border-gray-300 rounded-lg text-sm md:text-base outline-none focus:border-teal-500"
-                />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <select className="w-full p-3 md:p-4 border border-gray-300 rounded-lg text-sm md:text-base outline-none bg-white text-gray-600 focus:border-teal-500">
-                    <option>Service</option>
-                    <option>Weight Management</option>
-                    <option>PCOD/PCOS</option>
-                    <option>Therapeutic Diet</option>
-                    <option>Wedding Program</option>
-                  </select>
-                  <input 
-                    type="date" 
-                    placeholder="dd-mm-yyyy"
-                    className="w-full p-3 md:p-4 border border-gray-300 rounded-lg text-sm md:text-base outline-none text-gray-600 focus:border-teal-500"
-                  />
-                </div>
-                <button 
-                  type="submit"
-                  className="w-full sm:w-auto bg-[#ff9100] text-white font-semibold text-sm md:text-base border-none rounded-full py-3 md:py-4 px-8 cursor-pointer mt-2 hover:shadow-lg transition-all duration-300"
-                >
-                  Book An Appointment
-                </button>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+
+          {/* MOBILE */}
+          <div className="md:hidden">
+            <div className="overflow-hidden rounded-[28px] bg-[#014E4E] px-4 pb-6 pt-7">
+              <div className="mb-5">
+                <div className="mb-2 flex items-center gap-2">
+                  <span className="text-[#FF850B] text-[13px] leading-none">✦</span>
+                  <span className="text-[13px] font-semibold text-white">
+                    How It Work
+                  </span>
+                </div>
+
+                <h2 className="text-[30px] font-bold leading-[1.18] tracking-[-0.02em] text-white">
+                  Step-by-step guide to
+                  <br />
+                  your healthy journey
+                </h2>
+
+                <p className="mt-4 max-w-[335px] text-[14px] leading-[1.7] text-white/90">
+                  Achieving your health goals has never been easier. Our
+                  step-by-step approach provides personalized guidance,
+                  actionable strategies, and ongoing support.
+                </p>
+              </div>
+
+              <div className="relative pl-[6px] pr-[2px]">
+                <div className="absolute left-[19px] top-[28px] bottom-[240px] border-l border-dotted border-white/45" />
+
+                <div className="space-y-4">
+                  {/* Mobile Step 1 */}
+                  <div className="relative pl-10">
+                    <div className="absolute left-0 top-[30px] z-[2] flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[#FF850B] text-[12px] font-semibold text-white">
+                      1
+                    </div>
+
+                    <div className="rounded-[18px] bg-[rgba(255,255,255,0.10)] px-3 py-4 shadow-[0_8px_16px_rgba(0,0,0,0.16)] ring-1 ring-white/5">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-[66px] w-[66px] flex-shrink-0 items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <circle cx="15.5" cy="5.7" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <circle cx="4.9" cy="24.3" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <circle cx="15.5" cy="24.3" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <circle cx="26.1" cy="24.3" r="3.1" stroke="white" strokeWidth="1.2" />
+                            <path
+                              d="M15.5 8.8V16.2M8 20.9H23M4.9 21.2V17.2H26.1V21.2"
+                              stroke="white"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </div>
+
+                        <div className="pt-1">
+                          <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                            Choose Your Plan
+                          </h3>
+                          <p className="mt-1.5 text-[12px] leading-[1.45] text-white/90">
+                            Select a diet plan based on your goal, health
+                            condition, and duration.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Step 2 */}
+                  <div className="relative pl-10">
+                    <div className="absolute left-0 top-[30px] z-[2] flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[#FF850B] text-[12px] font-semibold text-white">
+                      2
+                    </div>
+
+                    <div className="rounded-[18px] bg-[rgba(255,255,255,0.10)] px-3 py-4 shadow-[0_8px_16px_rgba(0,0,0,0.16)] ring-1 ring-white/5">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-[66px] w-[66px] flex-shrink-0 items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <path
+                              d="M10 15.2V11.2C10 8 12.5 5.5 15.5 5.5C18.5 5.5 21 8 21 11.2V15.2"
+                              stroke="white"
+                              strokeWidth="1.2"
+                            />
+                            <rect x="7.4" y="13.5" width="4.2" height="7.2" rx="2.1" stroke="white" strokeWidth="1.2" />
+                            <rect x="19.4" y="13.5" width="4.2" height="7.2" rx="2.1" stroke="white" strokeWidth="1.2" />
+                            <path
+                              d="M14 22.6H17.2C18.7 22.6 19.9 21.4 19.9 19.9"
+                              stroke="white"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                            />
+                            <rect x="13.1" y="21.2" width="3.8" height="2.6" rx="1.3" stroke="white" strokeWidth="1.2" />
+                          </svg>
+                        </div>
+
+                        <div className="pt-1">
+                          <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                            Health Counsellor Connect
+                          </h3>
+                          <p className="mt-1.5 text-[12px] leading-[1.45] text-white/90">
+                            Our health counsellor connects with you to
+                            understand your lifestyle and concerns.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Step 3 */}
+                  <div className="relative pl-10">
+                    <div className="absolute left-0 top-[30px] z-[2] flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[#FF850B] text-[12px] font-semibold text-white">
+                      3
+                    </div>
+
+                    <div className="rounded-[18px] bg-[rgba(255,255,255,0.10)] px-3 py-4 shadow-[0_8px_16px_rgba(0,0,0,0.16)] ring-1 ring-white/5">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-[66px] w-[66px] flex-shrink-0 items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <circle cx="12" cy="11.5" r="4.2" stroke="white" strokeWidth="1.1" />
+                            <path
+                              d="M5.5 23.5C6.5 19.7 8.9 18 12 18C15.1 18 17.5 19.7 18.5 23.5"
+                              stroke="white"
+                              strokeWidth="1.1"
+                              strokeLinecap="round"
+                            />
+                            <rect x="18.7" y="8.2" width="7.4" height="10.2" rx="1.4" stroke="white" strokeWidth="1.1" />
+                            <path d="M20.6 11.2H24.4M20.6 14.2H24.4" stroke="white" strokeWidth="1.1" strokeLinecap="round" />
+                            <path d="M18.7 23.5H26.2" stroke="white" strokeWidth="1.1" strokeLinecap="round" />
+                          </svg>
+                        </div>
+
+                        <div className="pt-1">
+                          <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                            Dietitian Assessment Call
+                          </h3>
+                          <p className="mt-1.5 text-[12px] leading-[1.45] text-white/90">
+                            Your assigned dietitian speaks with you to
+                            understand your lifestyle, food choices and health
+                            goals before planning your diet.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Step 4 */}
+                  <div className="relative pl-10">
+                    <div className="absolute left-0 top-[30px] z-[2] flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[#FF850B] text-[12px] font-semibold text-white">
+                      4
+                    </div>
+
+                    <div className="rounded-[18px] bg-[rgba(255,255,255,0.10)] px-3 py-4 shadow-[0_8px_16px_rgba(0,0,0,0.16)] ring-1 ring-white/5">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-[66px] w-[66px] flex-shrink-0 items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <rect x="8.2" y="4.8" width="14.6" height="21.4" rx="1.8" stroke="white" strokeWidth="1.2" />
+                            <path d="M12 9.7H19" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
+                            <rect x="11.2" y="12.6" width="2.5" height="2.5" stroke="white" strokeWidth="1.1" />
+                            <rect x="11.2" y="17.2" width="2.5" height="2.5" stroke="white" strokeWidth="1.1" />
+                            <path d="M15.4 13.8H19.6M15.4 18.4H19.6" stroke="white" strokeWidth="1.1" strokeLinecap="round" />
+                          </svg>
+                        </div>
+
+                        <div className="pt-1">
+                          <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                            Personalised Plan Delivery
+                          </h3>
+                          <p className="mt-1.5 text-[12px] leading-[1.45] text-white/90">
+                            Your customised diet plan is shared on OUR APP
+                            within 24 hours of the assessment.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Mobile Step 5 */}
+                  <div className="relative pl-10">
+                    <div className="absolute left-0 top-[30px] z-[2] flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[#FF850B] text-[12px] font-semibold text-white">
+                      5
+                    </div>
+
+                    <div className="rounded-[18px] bg-[rgba(255,255,255,0.10)] px-3 py-4 shadow-[0_8px_16px_rgba(0,0,0,0.16)] ring-1 ring-white/5">
+                      <div className="flex items-start gap-3">
+                        <div className="flex h-[66px] w-[66px] flex-shrink-0 items-center justify-center rounded-full border border-white/70">
+                          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
+                            <rect x="5.2" y="19.2" width="20.6" height="5.4" stroke="white" strokeWidth="1.1" />
+                            <path d="M8.5 19.1V12.7M15.5 19.1V9.3M22.5 19.1V14.8" stroke="white" strokeWidth="1.1" />
+                            <path d="M7.2 10.1L10.4 7.8L14.1 10.1L18.1 6.8L23.6 9.5" stroke="white" strokeWidth="1.1" />
+                            <path d="M13.8 5.1H17.2V8.5" stroke="white" strokeWidth="1.1" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </div>
+
+                        <div className="pt-1">
+                          <h3 className="text-[15px] font-semibold leading-[1.35] text-white">
+                            Follow-Ups &amp; Tracking
+                          </h3>
+                          <p className="mt-1.5 text-[12px] leading-[1.45] text-white/90">
+                            Weekly or requirement-based follow-ups to track
+                            progress and make timely adjustments.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* mobile appointment */}
+                <div className="mt-6 rounded-[18px] border border-white/60 bg-[linear-gradient(180deg,#0f6767_0%,#0d5555_100%)] p-[1px]">
+                  <div className="rounded-[17px] bg-white p-4">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-[#FF850B] text-[13px] leading-none">✦</span>
+                      <span className="text-[13px] font-semibold text-[#014E4E]">
+                        Our Testimonials
+                      </span>
+                    </div>
+
+                    <h3 className="text-[26px] font-bold leading-[1.05] tracking-[-0.02em] text-[#FF850B]">
+                      Make appointment
+                    </h3>
+
+                    <p className="mt-3 text-[13px] leading-[1.6] text-[#6F6F72]">
+                      Easy scheduling for a personalized health coaching
+                      session. Take the first step towards better health today!
+                    </p>
+
+                    <div className="mt-4 overflow-hidden rounded-[18px]">
+                      <Image
+                        src="/img/b29c961c86fe88546c6e3c94c7c1fdaee4e4c518.png"
+                        alt="Dietitian consultation"
+                        width={350}
+                        height={210}
+                        className="h-auto w-full object-cover"
+                      />
+                    </div>
+
+                    <form className="mt-5 space-y-3">
+                      <div className="grid grid-cols-2 gap-3">
+                        <input
+                          type="text"
+                          placeholder="First Name"
+                          className="h-[48px] w-full rounded-[10px] border border-[#E8E8E8] bg-white px-4 text-[13px] text-[#8B8B8E] outline-none placeholder:text-[#8B8B8E]"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Last Name"
+                          className="h-[48px] w-full rounded-[10px] border border-[#E8E8E8] bg-white px-4 text-[13px] text-[#8B8B8E] outline-none placeholder:text-[#8B8B8E]"
+                        />
+                      </div>
+
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        className="h-[48px] w-full rounded-[10px] border border-[#E8E8E8] bg-white px-4 text-[13px] text-[#8B8B8E] outline-none placeholder:text-[#8B8B8E]"
+                      />
+
+                      <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        className="h-[48px] w-full rounded-[10px] border border-[#E8E8E8] bg-white px-4 text-[13px] text-[#8B8B8E] outline-none placeholder:text-[#8B8B8E]"
+                      />
+
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="relative">
+                          <select className="h-[48px] w-full appearance-none rounded-[10px] border border-[#E8E8E8] bg-white px-4 text-[13px] text-[#8B8B8E] outline-none">
+                            <option>Service</option>
+                            <option>Weight Management</option>
+                            <option>PCOD/PCOS</option>
+                            <option>Therapeutic Diet</option>
+                            <option>Wedding Program</option>
+                          </select>
+                          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#343A40]">
+                            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true">
+                              <path
+                                d="M2 3L7 8L12 3"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </span>
+                        </div>
+
+                        <input
+                          type="date"
+                          className="h-[48px] w-full rounded-[10px] border border-[#E8E8E8] bg-white px-4 text-[13px] text-[#8B8B8E] outline-none"
+                        />
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="mt-2 inline-flex h-[46px] min-w-[155px] items-center justify-center rounded-full bg-[#FF850B] px-6 text-[14px] font-bold text-white"
+                      >
+                        Book An Appointment
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* FAQ Section */}
