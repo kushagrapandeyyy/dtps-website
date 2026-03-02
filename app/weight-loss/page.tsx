@@ -2,12 +2,12 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import FiveCycleProgram from '@/components/FiveCycleProgram';
 import YouTubeShortsSlider from '@/components/YouTubeShortsSlider';
 import PageWrapper from '@/components/PageWrapper';
 import TransformationGallery from '@/components/TransformationGallery';
 import DynamicPopup from '@/components/DynamicPopup';
 import PlanBannerDisplay from '@/components/PlanBannerDisplay';
+import ExpertGuidanceSection from '@/components/ExpertGuidanceSection';
 import { getPricingByCategory } from '@/lib/api';
 import DynamicPageHero from '@/components/DynamicPageHero';
 import { getOptimizedUrl } from '@/lib/imagekit';
@@ -248,182 +248,123 @@ export default function WeightLossPage() {
       </section>
 
       {/* ═════ FIVE CYCLE PROGRAM ═════ */}
-      <div className="px-4 md:px-12 lg:px-[120px]">
-        <FiveCycleProgram />
-      </div>
+      <section className="px-4 md:px-12 lg:px-[120px]">
+        {/* Desktop Version */}
+        <div className="hidden lg:block">
+          <Image
+            src="/images/Our Five-Cycle Program ( dekstop version ).svg"
+            alt="Our Five-Cycle Program - Desktop"
+            width={1200}
+            height={600}
+            priority
+            className="w-full h-auto"
+          />
+        </div>
+
+        {/* Mobile Version */}
+        <div className="lg:hidden">
+          <Image
+            src="/images/Our Five-Cycle Program ( mobile ).svg"
+            alt="Our Five-Cycle Program - Mobile"
+            width={600}
+            height={800}
+            priority
+            className="w-full h-auto"
+          />
+        </div>
+      </section>
 
       {/* ═════ WHAT TO EXPECT ═════ */}
       <section className="py-14 md:py-24 px-4 md:px-12 lg:px-[120px]">
-        <div className="max-w-[1000px] mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          {/* Images */}
-          <div className="relative w-full max-w-[420px] h-[380px] md:h-[460px] shrink-0">
-            {/* Image 1 - top left */}
-            <div className="relative w-[200px] h-[240px] md:w-[270px] md:h-[300px] rounded-[20px] overflow-hidden z-[1] shadow-[0_4px_20px_rgba(0,0,0,0.08)]">
-              <Image src="/img/what-we-do-image-1.jpg" alt="Healthy food" fill className="object-cover" />
-            </div>
-            {/* Image 2 - overlapping bottom right */}
-            <div className="absolute left-[90px] top-[155px] md:left-[130px] md:top-[180px] w-[220px] h-[200px] md:w-[280px] md:h-[260px] rounded-[20px] overflow-hidden border-[4px] border-white z-[2] shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
-              <Image src="/img/what-we-do-image-2.jpg" alt="Cooking" fill className="object-cover" />
-            </div>
+        <div className="max-w-[1200px] mx-auto">
+          {/* Desktop Version */}
+          <div className="hidden lg:block">
+            <Image
+              src="/images/what to expect  ( dekstop).svg"
+              alt="What to Expect - Desktop"
+              width={1200}
+              height={600}
+              priority
+              className="w-full h-auto"
+            />
           </div>
-          {/* Right: Title + Features grid */}
-          <div className="flex-1 w-full">
-            <h2
-              className="text-[28px] md:text-[36px] lg:text-[42px] font-extrabold text-[#014D4D] leading-[1.15] mb-8 md:mb-10 italic"
-              style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}
-            >
-              What to expect<br />from our Program?
-            </h2>
-            {/* 2x2 grid with dividers */}
-            <div className="relative">
-              {/* Vertical divider */}
-              <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-[#014D4D]" />
-              {/* Horizontal divider */}
-              <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-px bg-[#014D4D]" />
-              {/* Center dot */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[9px] h-[9px] bg-[#014D4D] rounded-full z-10" />
-              <div className="grid grid-cols-2">
-                {expectFeatures.map((item, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col items-center text-center gap-2.5 px-3 py-5 md:px-6 md:py-7"
-                  >
-                    <div className="bg-[#014E4E] rounded-[8px] w-[44px] h-[44px] md:w-[50px] md:h-[50px] flex items-center justify-center">
-                      {item.iconComponent}
-                    </div>
-                    <h4 className="text-[#1E1E1E] font-bold text-[15px] md:text-[18px]" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                      {item.title}
-                    </h4>
-                    <p className="text-[#1E1E1E] text-[11px] md:text-[13px] leading-[1.5]" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+
+          {/* Mobile Version */}
+          <div className="lg:hidden">
+            <Image
+              src="/images/what to expect  ( dekstop).svg"
+              alt="What to Expect - Mobile"
+              width={600}
+              height={800}
+              priority
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
       {/* ═════ MONEY BACK GUARANTEE ═════ */}
       <section className="px-4 md:px-12 lg:px-[120px]">
-        <div className="bg-[#014E4E] rounded-[24px] py-10 md:py-16 px-6 md:px-12 lg:px-16 relative overflow-hidden">
-          {/* Subtle diagonal pattern overlay */}
-          <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px)' }} />
-          <div className="max-w-[900px] mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-10 relative z-10">
-            {/* Gold coin image */}
-            <div className="relative shrink-0 w-[180px] h-[180px] md:w-[260px] md:h-[260px] lg:w-[300px] lg:h-[300px]">
-              {/* Glow effect behind coin */}
-              <div className="absolute inset-[-10%] rounded-full bg-[radial-gradient(circle,rgba(238,190,71,0.25)_0%,transparent_70%)]" />
-              <Image
-                src="/img/Group-319-2-1.webp"
-                alt="100% Money Back Guarantee"
-                fill
-                className="object-contain relative z-10"
-              />
-            </div>
-            {/* Text content */}
-            <div className="flex-1 text-center md:text-left">
-              <p className="text-[#FF850B] text-[48px] md:text-[64px] lg:text-[72px] font-bold leading-none" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                100%
-              </p>
-              <p className="text-white text-[24px] md:text-[32px] font-bold mt-1" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                Money Back Guarantee
-              </p>
-              <p className="text-white text-[16px] md:text-[20px] mt-3 font-medium" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                If.... you don&apos;t like this!
-              </p>
-              <p className="text-white text-[15px] md:text-[18px] mt-4 leading-[1.6] opacity-90" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                Are we crazy people to make such an offer?<br />
-                No, we are very confident of our program, which has<br className="hidden md:inline" />
-                delivered a 98% success rate
-              </p>
-            </div>
+        <div className="max-w-[1200px] mx-auto">
+          {/* Desktop Version */}
+          <div className="hidden lg:block">
+            <Image
+              src="/images/money 100 ( desktop ).svg"
+              alt="100% Money Back Guarantee - Desktop"
+              width={1200}
+              height={600}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Mobile Version */}
+          <div className="lg:hidden">
+            <Image
+              src="/images/money 100 ( mobile ).svg"
+              alt="100% Money Back Guarantee - Mobile"
+              width={600}
+              height={800}
+              priority
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
       {/* ═════ WHAT DO YOU GET ═════ */}
       <section className="px-4 md:px-12 lg:px-[120px] py-12 md:py-20">
-        <div className="bg-[#EAEEF1] rounded-[24px] py-12 md:py-16 px-6 md:px-12 lg:px-[170px]">
-          <SectionTitle className="text-[#074F4F] mb-10 md:mb-14">What do you get?</SectionTitle>
-          <div className="flex flex-col gap-5 md:gap-6 pl-2">
-            {whatYouGet.map((item) => (
-              <div key={item} className="flex items-center gap-3">
-                <CheckIcon40 />
-                <span className="text-[#1E1E1E] font-semibold text-[16px] md:text-[18px] capitalize" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                  {item}
-                </span>
-              </div>
-            ))}
+        <div className="max-w-[1200px] mx-auto">
+          {/* Desktop Version */}
+          <div className="hidden lg:block">
+            <Image
+              src="/images/what you get ( desktop version ).svg"
+              alt="What You Get - Desktop"
+              width={1200}
+              height={600}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Mobile Version */}
+          <div className="lg:hidden">
+            <Image
+              src="/images/what you get ( mobile version ).svg"
+              alt="What You Get - Mobile"
+              width={600}
+              height={800}
+              priority
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
 
       {/* ═════ EXPERT'S GUIDANCE ═════ */}
-      <section className="px-4 md:px-12 lg:px-[120px]">
-        <div className="bg-[#004E4E] rounded-[24px] py-12 md:py-16 px-6 md:px-10 overflow-hidden">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <SectionTitle className="text-[#FBFBFB]">You are under Expert&apos;s Guidance</SectionTitle>
-            <p className="text-[#FAFAFA] text-[16px] md:text-[20px] mt-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Meet the Founder Behind DTPS
-            </p>
-          </div>
-          {/* Content */}
-          <div className="max-w-[1040px] mx-auto flex flex-col lg:flex-row items-start gap-8">
-            {/* Left: Text + badges */}
-            <div className="flex-1">
-              <div className="text-white text-[14px] md:text-[16px] leading-[1.65] mb-8" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                <p className="mb-3">
-                  DTPS is led by Dietitian Poonam Sagar, a name trusted by thousands of families across India and beyond. With 15+ years of hands-on experience, she has worked with Indian as well as international clients. Her work has been recognised with multiple awards in the field of nutrition and wellness, but what truly sets her apart is not the titles. It&apos;s her belief that diet should support your life, not control it.
-                </p>
-                <p className="mb-3">
-                  While the world pushed salads, supplements, and starvation, she built a system around ghar ka khana, nutrition science, and consistency. That belief is what became DTPS.<br />
-                  DTPS does not run on one dietitian alone.
-                </p>
-                <p>It runs on a team of 200+ qualified dietitians and health counsellors, trained to work with real people, real routines, and real challenges.</p>
-              </div>
-              {/* Feature badges */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-[540px]">
-                {expertBadges.map((b) => (
-                  <div key={b.text} className="bg-[#FF850B] rounded-[8px] p-1 flex items-center gap-2">
-                    <div className="bg-white rounded-[5px] w-[40px] h-[40px] flex items-center justify-center text-[18px] shrink-0">
-                      {b.icon}
-                    </div>
-                    <span className="text-white font-semibold text-[14px] md:text-[16px] capitalize" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>
-                      {b.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Right: Dietitian image */}
-            <div className="relative w-[240px] md:w-[283px] h-[400px] md:h-[547px] shrink-0 mx-auto lg:mx-0">
-              <Image src="/img/D-I-E-T-I-C-I-AN.png" alt="Dietitian Poonam Sagar" fill className="object-contain" />
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] rotate-180 text-center tracking-[4px]" style={{ fontFamily: 'var(--font-poppins), Poppins, sans-serif' }}>
-                <span className="text-[#3AB1A0] font-bold text-[28px] md:text-[42px]">POONAM </span>
-                <span className="text-[#FF850B] font-bold text-[28px] md:text-[42px]">SAGAR</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Stats row */}
-          <div className="max-w-[845px] mx-auto flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-12 md:mt-16">
-            {stats.map((s) => (
-              <div key={s.label} className="bg-[#FF850B] rounded-[16px] w-[140px] md:w-[190px] h-[100px] md:h-[140px] flex flex-col items-center justify-center text-white overflow-hidden">
-                <span className="text-[28px] md:text-[36px] font-semibold" style={{ fontFamily: 'var(--font-poppins), Poppins, sans-serif' }}>{s.value}</span>
-                <span className="text-[12px] md:text-[14px] font-semibold" style={{ fontFamily: 'var(--font-poppins), Poppins, sans-serif' }}>{s.label}</span>
-              </div>
-            ))}
-            <div className="bg-[#FF850B] rounded-[16px] w-[140px] md:w-[190px] h-[100px] md:h-[140px] flex flex-col items-center justify-center text-white text-center overflow-hidden px-2">
-              <span className="text-[12px] md:text-[14px] font-semibold" style={{ fontFamily: 'var(--font-poppins), Poppins, sans-serif' }}>Personalised</span>
-              <span className="text-[28px] md:text-[36px] font-semibold" style={{ fontFamily: 'var(--font-poppins), Poppins, sans-serif' }}>Ghar</span>
-              <span className="text-[12px] md:text-[14px] font-semibold" style={{ fontFamily: 'var(--font-poppins), Poppins, sans-serif' }}>ka Khana Diet Plan</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="section-wrapper">
+        <ExpertGuidanceSection />
+      </div>
 
       {/* ═════ FROM BAD DIETS TO FOREVER FIT ═════ */}
       <section className="py-12 md:py-20 px-4 md:px-12 lg:px-[120px]">
