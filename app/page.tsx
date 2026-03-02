@@ -9,6 +9,7 @@ import ExpertGuidanceSection from '@/components/ExpertGuidanceSection';
 import OurTeamSection from '@/components/OurTeamSection';
 import YouTubeShortsSlider from '@/components/YouTubeShortsSlider';
 import FAQSection from '@/components/FAQSection';
+import OurBlogsSection from '@/components/OurBlogsSection';
 import Image from 'next/image';
 import { getOptimizedUrl } from '@/lib/imagekit';
 
@@ -788,6 +789,11 @@ export default function HomePage() {
       {/* FAQ Section */}
       <div className="section-wrapper">
         <FAQSection />
+      </div>
+
+      {/* Our Blogs Section */}
+      <div className="section-wrapper">
+        <OurBlogsSection />
       </div>
 
       {/* Testimonials Section */}
