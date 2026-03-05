@@ -36,93 +36,39 @@ export default function PCODPage() {
 
   return (
     <main className="bg-white">
-      {/* Hero Section with Navbar */}
-      <div className="pcod-hero-wrapper">
-        <div className="pcod-hero-section">
+      {/* Hero Section with Navbar and Banner */}
+      <div className="pcod-hero-wrapper bg-[#1a5f5f]">
+        <div className="bg-[#1a5f5f] py-4">
           <Navbar />
-          
-          {/* Mobile Hero */}
-          <div className="pcod-hero-content md:hidden">
-            <div className="flex flex-col items-center text-center gap-4">
-              <div className="pcod-hero__badge mx-auto">✨ For Healthier, Happier you</div>
-              
-              <div className="pcod-hero__imgcard">
-                <Image 
-                  className="pcod-hero__img object-contain mx-auto"
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/pcos-1-removebg-preview.png"
-                  alt="PCOD/PCOS"
-                  width={280}
-                  height={300}
-                />
-              </div>
-
-              <div className="pcod-titlewrap text-center">
-                <h1 className="pcod-hero__title text-3xl">PCOD/PCOS</h1>
-                <div className="pcod-underline mx-auto"></div>
-              </div>
-
-              <p className="pcod-hero__desc text-sm px-2">
-                Transform your health with India&apos;s only diet where &apos;Ghar Ka Khana&apos; becomes your superpower for managing PCOD and achieving sustainable weight loss.
-              </p>
-
-              <div className="pcod-hero__buttons flex-col w-full px-4 gap-3">
-                <a href="/appointment" className="pcod-btn-primary w-full justify-center">
-                  Get Started Today
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-                <a href="#benefits" className="pcod-btn-orange w-full justify-center">Learn More</a>
-              </div>
-            </div>
+        </div>
+        
+        {/* Mobile Banner */}
+        <div className="md:hidden w-full">
+          <div className="relative w-full h-auto overflow-hidden rounded-b-3xl">
+            <Image 
+              src="/images/pcod mobile (1).png"
+              alt="PCOD Banner - Mobile"
+              width={800}
+              height={600}
+              quality={95}
+              className="w-full h-auto object-cover"
+              priority
+            />
           </div>
+        </div>
 
-          {/* Desktop Hero */}
-          <div className="pcod-hero-content hidden md:block">
-            <div className="pcod-hero__grid">
-              <div className="pcod-hero__left">
-                <div className="pcod-hero__badge">✨ For Healthier, Happier you</div>
-                
-                <div className="pcod-titlewrap">
-                  <h1 className="pcod-hero__title">PCOD/PCOS</h1>
-                  <div className="pcod-underline"></div>
-                </div>
-
-                <p className="pcod-hero__desc">
-                  Transform your health with India&apos;s only diet where &apos;Ghar Ka Khana&apos; becomes your superpower for managing PCOD and achieving sustainable weight loss.
-                </p>
-
-                <div className="pcod-hero__buttons">
-                  <a href="/appointment" className="pcod-btn-primary">
-                    Get Started Today
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                  <a href="#benefits" className="pcod-btn-orange">Learn More</a>
-                </div>
-              </div>
-
-              <div className="pcod-hero__right">
-                <div className="pcod-hero__imgcard">
-                  <Image 
-                    className="pcod-hero__img object-contain"
-                    src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/pcos-1-removebg-preview.png"
-                    alt="PCOD/PCOS"
-                    width={500}
-                    height={550}
-                  />
-                </div>
-
-                <div className="pcod-success">
-                  <div className="pcod-success__icon">✓</div>
-                  <div className="pcod-success__text">
-                    <h3>1000+</h3>
-                    <p>Success Stories</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Desktop Banner */}
+        <div className="hidden md:block w-full">
+          <div className="relative w-full h-auto overflow-hidden rounded-b-3xl">
+            <Image 
+              src="/images/pcod dekstop.png"
+              alt="PCOD Banner - Desktop"
+              width={1920}
+              height={800}
+              quality={95}
+              className="w-full h-auto object-cover"
+              priority
+            />
           </div>
         </div>
       </div>
