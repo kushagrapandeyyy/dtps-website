@@ -287,17 +287,39 @@ Book Your Consultation →
 
 <div className="mt-8 border-t border-gray-700 pt-6">
 
-<p className="text-gray-400 text-sm mb-2">
+<p className="text-gray-400 text-sm mb-3">
 Questions? Contact us
 </p>
 
-<p className="text-sm text-gray-300">
-📞 +91 98930 27688
-</p>
+{/* PHONE */}
 
-<p className="text-sm text-gray-300">
-✉️ support@dtpoonamsagar.com
-</p>
+<div className="flex items-center gap-3 text-sm text-gray-300 mb-2">
+
+<Image
+src="/images/contact.png"
+width={18}
+height={18}
+alt="Contact Icon"
+/>
+
+<span>+91 XXX XXX XXXX</span>
+
+</div>
+
+{/* EMAIL */}
+
+<div className="flex items-center gap-3 text-sm text-gray-300">
+
+<Image
+src="/images/email.png"
+width={18}
+height={18}
+alt="Email Icon"
+/>
+
+<span>contact@example.com</span>
+
+</div>
 
 </div>
 
@@ -313,48 +335,30 @@ Questions? Contact us
   );
 
 
-      {/* Symptoms Image Section */}
-      <div className="pcod-symptoms-image px-4 md:px-0">
-        <Image 
-          src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/Group-316.webp" 
-          alt="Symptoms & Nutritional Concerns" 
-          width={1200} 
-          height={600}
-          className="object-contain w-full h-auto"
-        />
-      </div>
+     {/* Symptoms Image Section */}
 
-      {/* Stats Section - Mobile */}
-      <section className="pcod-stats md:hidden py-6 px-4 flex-col gap-4">
-        <div className="pcod-stat">
-          <div className="pcod-stat-num orange text-3xl">1000+</div>
-          <div className="pcod-stat-label text-sm">Women Helped</div>
-        </div>
-        <div className="pcod-stat">
-          <div className="pcod-stat-num teal text-3xl">95%</div>
-          <div className="pcod-stat-label text-sm">Success Rate</div>
-        </div>
-        <div className="pcod-stat">
-          <div className="pcod-stat-num orange text-3xl">24/7</div>
-          <div className="pcod-stat-label text-sm">Support Available</div>
-        </div>
-      </section>
+<div className="pcod-symptoms-image px-4 md:px-0">
 
-      {/* Stats Section - Desktop */}
-      <section className="pcod-stats hidden md:flex">
-        <div className="pcod-stat">
-          <div className="pcod-stat-num orange">1000+</div>
-          <div className="pcod-stat-label">Women Helped</div>
-        </div>
-        <div className="pcod-stat">
-          <div className="pcod-stat-num teal">95%</div>
-          <div className="pcod-stat-label">Success Rate</div>
-        </div>
-        <div className="pcod-stat">
-          <div className="pcod-stat-num orange">24/7</div>
-          <div className="pcod-stat-label">Support Available</div>
-        </div>
-      </section>
+  {/* Desktop Banner */}
+  <Image
+    src="/images/symptons desktop.png"
+    alt="Symptoms & Nutritional Concerns"
+    width={1200}
+    height={600}
+    className="hidden md:block w-full h-auto object-contain"
+  />
+
+  {/* Mobile Banner */}
+  <Image
+    src="/images/symptons mobile.png"
+    alt="Symptoms & Nutritional Concerns"
+    width={800}
+    height={800}
+    className="block md:hidden w-full h-auto object-contain"
+  />
+
+</div>
+     
 
       {/* What You Will Get - Mobile */}
       <section className="pcod-benefits-sec md:hidden py-8 px-4">
