@@ -73,208 +73,245 @@ export default function PCODPage() {
         </div>
       </div>
 
-      {/* Role of Diet Section - Mobile */}
-      <section className="pcod-section md:hidden py-8 px-4" id="benefits">
-        <div className="container">
-          <h2 className="pcod-section-title text-2xl mb-3">Role of Diet in PCOD/PCOS</h2>
-          <p className="pcod-section-subtitle text-sm mb-2">
-            Diet plays a crucial role in managing PCOS, as it can help mitigate some of the symptoms and associated health risks
-          </p>
-          <div className="pcod-section-script text-xl mb-6">&quot;Ghar ka Khana&quot;</div>
 
-          <div className="flex flex-col gap-4">
-            {/* Card 1 */}
-            <div className="pcod-benefit-card rounded-2xl">
-              <div className="pcod-benefit-card-image h-[140px]">
-                <div className="pcod-benefit-no">1</div>
-                <Image src="/img/what-we-do-image-1.jpg" alt="Balancing Blood Sugar" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content p-4">
-                <div className="pcod-benefit-line"></div>
-                <h3 className="text-base">Balancing Blood Sugar Levels</h3>
-                <p className="text-xs">Women with PCOS often experience insulin resistance, where the body&apos;s cells do not respond normally to insulin.</p>
-              </div>
-            </div>
 
-            {/* Card 2 */}
-            <div className="pcod-benefit-card rounded-2xl">
-              <div className="pcod-benefit-card-image h-[140px]">
-                <div className="pcod-benefit-no">2</div>
-                <Image src="/img/what-we-do-image-2.jpg" alt="Managing Weight" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content p-4">
-                <div className="pcod-benefit-line"></div>
-                <h3 className="text-base">Managing Weight</h3>
-                <p className="text-xs">Losing even a small amount of weight if you are overweight can help manage PCOS symptoms.</p>
-              </div>
-            </div>
 
-            {/* Card 3 */}
-            <div className="pcod-benefit-card rounded-2xl">
-              <div className="pcod-benefit-card-image h-[140px]">
-                <div className="pcod-benefit-no">3</div>
-                <Image src="/img/what-we-do-image-1.jpg" alt="Reducing Inflammation" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content p-4">
-                <div className="pcod-benefit-line"></div>
-                <h3 className="text-base">Reducing Inflammation</h3>
-                <p className="text-xs">PCOS is often linked with low-grade inflammation. Consuming a diet high in anti-inflammatory foods can be beneficial.</p>
-              </div>
-            </div>
 
-            {/* Card 4 */}
-            <div className="pcod-benefit-card rounded-2xl">
-              <div className="pcod-benefit-card-image h-[140px]">
-                <div className="pcod-benefit-no">4</div>
-                <Image src="/img/what-we-do-image-2.jpg" alt="Increasing Fertility" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content p-4">
-                <div className="pcod-benefit-line"></div>
-                <h3 className="text-base">Increasing Fertility</h3>
-                <p className="text-xs">PCOS is one of the leading causes of infertility in women due to hormonal imbalances affecting ovulation.</p>
-              </div>
-            </div>
 
-            {/* Contact Card - Mobile */}
-            <div className="pcod-contact-card rounded-2xl p-5">
-              <div className="pcod-corner-mark"></div>
-              <div className="pcod-contact-pill text-xs">✨ Get Started</div>
-              <h3 className="text-xl mb-3">Ready to Transform<br/>Your Health?</h3>
-              <p className="text-xs mb-4">Join thousands of women who have successfully managed their PCOD/PCOS through our personalized nutrition plans.</p>
-              <ul className="pcod-contact-points mb-4">
-                <li className="text-xs"><span className="pcod-tick">✓</span> Personalized diet plans</li>
-                <li className="text-xs"><span className="pcod-tick">✓</span> Expert nutritionist support</li>
-                <li className="text-xs"><span className="pcod-tick">✓</span> Traditional &quot;Ghar ka Khana&quot;</li>
-                <li className="text-xs"><span className="pcod-tick">✓</span> Proven results</li>
-              </ul>
-              <a href="/appointment" className="pcod-btn-primary w-full justify-center text-sm py-3">
-                Book Your Consultation
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Role of Diet Section - Desktop */}
-      <section className="pcod-section hidden md:block" id="benefits-desktop">
-        <div className="container">
-          <h2 className="pcod-section-title">Role of Diet in PCOD/PCOS</h2>
-          <p className="pcod-section-subtitle">
-            Diet plays a crucial role in managing PCOS, as it can help mitigate some of the symptoms and associated health risks
-          </p>
-          <div className="pcod-section-script">&quot;Ghar ka Khana&quot;</div>
 
-          <div className="pcod-benefits-grid">
-            {/* Card 1 */}
-            <div className="pcod-benefit-card">
-              <div className="pcod-benefit-card-image">
-                <div className="pcod-benefit-no">1</div>
-                <Image src="/img/what-we-do-image-1.jpg" alt="Balancing Blood Sugar" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content">
-                <div className="pcod-benefit-line"></div>
-                <h3>Balancing Blood Sugar Levels</h3>
-                <p>Women with PCOS often experience insulin resistance, where the body&apos;s cells do not respond normally to insulin.</p>
-              </div>
-            </div>
+<section className="py-16 md:py-24 bg-[#F5F5F5]" id="benefits">
 
-            {/* Card 2 */}
-            <div className="pcod-benefit-card">
-              <div className="pcod-benefit-card-image">
-                <div className="pcod-benefit-no">2</div>
-                <Image src="/img/what-we-do-image-2.jpg" alt="Managing Weight" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content">
-                <div className="pcod-benefit-line"></div>
-                <h3>Managing Weight</h3>
-                <p>Losing even a small amount of weight if you are overweight can help manage PCOS symptoms.</p>
-              </div>
-            </div>
+<div className="max-w-[1200px] mx-auto px-4">
 
-            {/* Contact Card */}
-            <div className="pcod-contact-card">
-              <div className="pcod-corner-mark"></div>
-              <div className="pcod-contact-pill">✨ Get Started</div>
-              <h3>Ready to Transform<br/>Your Health?</h3>
-              <p>Join thousands of women who have successfully managed their PCOD/PCOS through our personalized nutrition plans.</p>
-              <ul className="pcod-contact-points">
-                <li><span className="pcod-tick">✓</span> Personalized diet plans</li>
-                <li><span className="pcod-tick">✓</span> Expert nutritionist support</li>
-                <li><span className="pcod-tick">✓</span> Traditional &quot;Ghar ka Khana&quot;</li>
-                <li><span className="pcod-tick">✓</span> Proven results</li>
-              </ul>
-              <a href="/appointment" className="pcod-btn-primary w-full justify-center">
-                Book Your Consultation
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-              <div className="pcod-contact-bottom">
-                <small>Questions? Contact us</small>
-                <div className="pcod-contact-row">📞 +91 XXX XXX XXXX</div>
-                <div className="pcod-contact-row">✉️ contact@example.com</div>
-              </div>
-            </div>
+<h2 className="text-center text-[28px] md:text-[44px] font-bold text-black">
+Role of Diet in <span className="text-[#FF8A00]">PCOD/PCOS</span>
+</h2>
 
-            {/* Card 3 */}
-            <div className="pcod-benefit-card">
-              <div className="pcod-benefit-card-image">
-                <div className="pcod-benefit-no">3</div>
-                <Image src="/img/what-we-do-image-1.jpg" alt="Reducing Inflammation" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content">
-                <div className="pcod-benefit-line"></div>
-                <h3>Reducing Inflammation</h3>
-                <p>PCOS is often linked with low-grade inflammation. Consuming a diet high in anti-inflammatory foods can be beneficial.</p>
-              </div>
-            </div>
+<p className="text-center text-gray-500 text-sm md:text-base mt-3 max-w-[700px] mx-auto">
+Diet plays a crucial role in managing PCOS, as it can help mitigate some of the symptoms and associated health risks
+</p>
 
-            {/* Card 4 */}
-            <div className="pcod-benefit-card">
-              <div className="pcod-benefit-card-image">
-                <div className="pcod-benefit-no">4</div>
-                <Image src="/img/what-we-do-image-2.jpg" alt="Increasing Fertility" width={400} height={200} className="object-cover w-full h-full" />
-              </div>
-              <div className="pcod-benefit-card-content">
-                <div className="pcod-benefit-line"></div>
-                <h3>Increasing Fertility</h3>
-                <p>PCOS is one of the leading causes of infertility in women due to hormonal imbalances affecting ovulation.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Symptoms Title - Mobile */}
-      <div className="pcod-title-wrap md:hidden py-6 px-4">
-        <div className="pcod-label">
-          <span className="pcod-line-deco w-6"></span>
-          <span className="pcod-label-text text-xs">COMMON SYMPTOMS</span>
-          <span className="pcod-line-deco w-6"></span>
-        </div>
-        <h2 className="pcod-title-main text-xl">Symptoms &amp; Nutritional Concerns</h2>
-        <p className="pcod-title-sub text-xs px-2">
-          Understanding your symptoms is the first step toward transformation
-          through proper nutrition and lifestyle changes.
-        </p>
-      </div>
+<div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-      {/* Symptoms Title - Desktop */}
-      <div className="pcod-title-wrap hidden md:block">
-        <div className="pcod-label">
-          <span className="pcod-line-deco"></span>
-          <span className="pcod-label-text">COMMON SYMPTOMS</span>
-          <span className="pcod-line-deco"></span>
-        </div>
-        <h2 className="pcod-title-main">Symptoms &amp; Nutritional Concerns</h2>
-        <p className="pcod-title-sub">
-          Understanding your symptoms is the first step toward transformation<br/>
-          through proper nutrition and lifestyle changes.
-        </p>
-      </div>
+
+{/* LEFT CARDS */}
+
+<div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+
+{/* CARD 1 */}
+
+<div className="rounded-[20px] overflow-hidden bg-white shadow-lg flex flex-col">
+
+<div className="h-[200px]">
+<Image
+src="/images/Balancing Blood Sugar Levels.png"
+width={500}
+height={300}
+alt="Balancing Blood Sugar"
+className="w-full h-full object-cover"
+/>
+</div>
+
+<div className="bg-[#FF8A00] text-white p-6 flex-1">
+
+<div className="w-10 h-[2px] bg-white mb-4"></div>
+
+<h3 className="text-lg font-semibold mb-2">
+Balancing Blood Sugar Levels
+</h3>
+
+<p className="text-sm opacity-90">
+Women with PCOS often experience insulin resistance, where the body's cells do not respond normally to insulin.
+</p>
+
+</div>
+
+</div>
+
+
+
+{/* CARD 2 */}
+
+<div className="rounded-[20px] overflow-hidden bg-white shadow-lg flex flex-col">
+
+<div className="h-[200px]">
+<Image
+src="/images/Managing Weight.png"
+width={500}
+height={300}
+alt="Managing Weight"
+className="w-full h-full object-cover"
+/>
+</div>
+
+<div className="bg-[#FF8A00] text-white p-6 flex-1">
+
+<div className="w-10 h-[2px] bg-white mb-4"></div>
+
+<h3 className="text-lg font-semibold mb-2">
+Managing Weight
+</h3>
+
+<p className="text-sm opacity-90">
+Losing even a small amount of weight if you are overweight can help manage PCOS symptoms.
+</p>
+
+</div>
+
+</div>
+
+
+
+{/* CARD 3 */}
+
+<div className="rounded-[20px] overflow-hidden bg-white shadow-lg flex flex-col">
+
+<div className="h-[200px]">
+<Image
+src="/images/Reducing Inflammation.png"
+width={500}
+height={300}
+alt="Reducing Inflammation"
+className="w-full h-full object-cover"
+/>
+</div>
+
+<div className="bg-[#FF8A00] text-white p-6 flex-1">
+
+<div className="w-10 h-[2px] bg-white mb-4"></div>
+
+<h3 className="text-lg font-semibold mb-2">
+Reducing Inflammation
+</h3>
+
+<p className="text-sm opacity-90">
+PCOS is often linked with low-grade inflammation. Consuming a diet high in anti-inflammatory foods can be beneficial.
+</p>
+
+</div>
+
+</div>
+
+
+
+{/* CARD 4 */}
+
+<div className="rounded-[20px] overflow-hidden bg-white shadow-lg flex flex-col">
+
+<div className="h-[200px]">
+<Image
+src="/images/Increasing Fertility.png"
+width={500}
+height={300}
+alt="Increasing Fertility"
+className="w-full h-full object-cover"
+/>
+</div>
+
+<div className="bg-[#FF8A00] text-white p-6 flex-1">
+
+<div className="w-10 h-[2px] bg-white mb-4"></div>
+
+<h3 className="text-lg font-semibold mb-2">
+Increasing Fertility
+</h3>
+
+<p className="text-sm opacity-90">
+PCOS is one of the leading causes of infertility in women due to hormonal imbalances affecting ovulation.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+{/* RIGHT CONTACT CARD */}
+
+<div className="bg-[#141414] text-white rounded-[24px] p-8 shadow-xl relative flex flex-col justify-between">
+
+<div>
+
+<div className="absolute top-6 right-6 border-t-2 border-r-2 border-[#FF8A00] w-10 h-10"></div>
+
+<div className="bg-[#FF8A00] inline-block text-xs font-semibold px-4 py-2 rounded-full mb-6">
+✨ Get Started
+</div>
+
+<h3 className="text-[30px] font-bold leading-tight mb-4">
+Ready to Transform Your Health?
+</h3>
+
+<p className="text-gray-300 text-sm mb-6">
+Join thousands of women who have successfully managed their PCOD/PCOS through our personalized nutrition plans.
+</p>
+
+<ul className="space-y-3 text-sm mb-8">
+
+<li className="flex items-center gap-2">
+<span className="w-5 h-5 rounded-full bg-[#FF8A00] flex items-center justify-center text-black text-xs">✓</span>
+Personalized diet plans
+</li>
+
+<li className="flex items-center gap-2">
+<span className="w-5 h-5 rounded-full bg-[#FF8A00] flex items-center justify-center text-black text-xs">✓</span>
+Expert nutritionist support
+</li>
+
+<li className="flex items-center gap-2">
+<span className="w-5 h-5 rounded-full bg-[#FF8A00] flex items-center justify-center text-black text-xs">✓</span>
+Traditional "Ghar ka Khana"
+</li>
+
+<li className="flex items-center gap-2">
+<span className="w-5 h-5 rounded-full bg-[#FF8A00] flex items-center justify-center text-black text-xs">✓</span>
+Proven results
+</li>
+
+</ul>
+
+<a
+href="/appointment"
+className="block text-center bg-[#FF8A00] hover:bg-[#ff7a00] transition text-white font-semibold py-4 rounded-full"
+>
+Book Your Consultation →
+</a>
+
+</div>
+
+
+<div className="mt-8 border-t border-gray-700 pt-6">
+
+<p className="text-gray-400 text-sm mb-2">
+Questions? Contact us
+</p>
+
+<p className="text-sm text-gray-300">
+📞 +91 98930 27688
+</p>
+
+<p className="text-sm text-gray-300">
+✉️ support@dtpoonamsagar.com
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+  );
+
 
       {/* Symptoms Image Section */}
       <div className="pcod-symptoms-image px-4 md:px-0">
