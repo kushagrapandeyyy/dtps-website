@@ -248,7 +248,7 @@ export default function ExpertGuidanceSection() {
   return (
     <section
       ref={sectionRef}
-      className={`relative w-full overflow-hidden rounded-[24px] bg-[#005A5A] ${epilogue.className}`}
+      className={`relative w-full max-w-[1200px] mx-auto my-8 md:my-12 lg:my-16 overflow-hidden rounded-[24px] bg-[#005A5A] ${epilogue.className}`}
     >
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
         <div className="absolute left-[-10px] top-[10px] h-[74px] w-[34px] rounded-full border border-white/30" />

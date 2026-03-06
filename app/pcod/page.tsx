@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import TransformationGallery from '@/components/TransformationGallery';
 import DynamicPlansDisplay from '@/components/DynamicPlansDisplay';
+import ExpertGuidanceSection from '@/components/ExpertGuidanceSection';
 
 const whatYouGet = [
   { icon: '📊', title: 'Ongoing Support', desc: 'Regular follow-ups to adapt your diet plan as needed and ensure progress results.' },
@@ -302,7 +303,7 @@ height={18}
 alt="Contact Icon"
 />
 
-<span>+91 XXX XXX XXXX</span>
+<span>+91 98930 27688</span>
 
 </div>
 
@@ -317,7 +318,7 @@ height={18}
 alt="Email Icon"
 />
 
-<span>contact@example.com</span>
+<span>support@dtpoonamsagar.com</span>
 
 </div>
 
@@ -707,15 +708,38 @@ height={200}
 
 </section>
 
+      {/* Expert Guidance Section */}
+      <ExpertGuidanceSection />
 
-
-      {/* Transformation Gallery Section */}
-      <TransformationGallery 
-        page="pcod"
-        title="Success Stories from Our PCOD Patients"
-        subtitle="Real transformations, real health improvements - join thousands who have managed their PCOD successfully"
-        maxItems={6}
-      />
+      {/* TESTIMONIALS GALLERY */}
+      <section className="py-12 md:py-20 px-4 md:px-12 lg:px-[120px]">
+        <div className="max-w-[1000px] mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
+            <div className="max-w-[630px]">
+              <div className="text-[#FF850B] text-xs md:text-sm font-semibold tracking-wide uppercase">Success Stories</div>
+              <h2 className="text-[#1E1E1E] text-[28px] md:text-[44px] font-bold leading-[1.2] mt-2">
+                Over 75,000+<br />People Manage PCOD Successfully
+              </h2>
+              <p className="text-[#828283] text-[12px] md:text-[14px] mt-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                Join our Plan today and embark on a journey to better health with our PCOD diet plan!
+              </p>
+            </div>
+            {/* Dots indicator */}
+            <div className="flex gap-1 items-center">
+              {[6,6,6,18,6,6].map((w, i) => (
+                <div key={i} className={`h-[6px] rounded-full ${w === 18 ? 'bg-[#FF850B] w-[18px]' : 'bg-[#014E4E] w-[6px]'}`} />
+              ))}
+            </div>
+          </div>
+          {/* TransformationGallery for PCOD */}
+          <TransformationGallery
+            page="pcod"
+            title=""
+            subtitle=""
+            maxItems={6}
+          />
+        </div>
+      </section>
 
       {/* Pricing Section - Mobile */}
       <section className="wl-section md:hidden py-8 px-4">
