@@ -20,7 +20,8 @@ export default function OurTeamSection() {
   return (
     <>
       <section className="our-team-section">
-        {/* Top banner */}
+
+        {/* Banner */}
         <div className="team-banner">
           <Image
             src="/img/a21bc645bd7be0db87d5480827d18929468c8767.png"
@@ -35,6 +36,7 @@ export default function OurTeamSection() {
         {/* Content */}
         <div className="team-content-wrap">
           <div className="team-content-inner">
+
             <div className="team-heading-group">
               <div className="team-label-row">
                 <div className="team-label-icon" />
@@ -47,25 +49,16 @@ export default function OurTeamSection() {
             </div>
 
             <div className="team-description">
-              <span className="normal">
-                Weight loss doesn’t work because of a chart. It works because of
-                people. DTPS is run by a team of{" "}
-              </span>
+              Weight loss doesn’t work because of a chart. It works because of
+              people. DTPS is run by a team of{" "}
               <span className="bold">
                 200+ dietitians and health counsellors.
               </span>
               <br />
-              <span className="normal">
-                They talk to you, understand your routine and adjust your plan
-                when things don’t go as planned. They track your progress,
-                adjust your plan when needed, and stay involved until results
-                show. This isn’t automated support. This isn’t passion written
-                in a job description. It comes from people who genuinely care
-                about outcomes, who think beyond charts and calls, and who take
-                personal responsibility for your progress until results actually
-                show.
-              </span>
+              They talk to you, understand your routine and adjust your plan
+              when things don’t go as planned.
             </div>
+
           </div>
 
           <div className="team-divider" />
@@ -80,9 +73,10 @@ export default function OurTeamSection() {
               </div>
             ))}
           </div>
+
         </div>
 
-        {/* Bottom gallery - only 4 images, no duplicates */}
+        {/* Gallery */}
         <div className="team-gallery">
           {galleryImages.map((img, index) => (
             <div key={index} className="gallery-card">
@@ -96,9 +90,11 @@ export default function OurTeamSection() {
             </div>
           ))}
         </div>
+
       </section>
 
       <style jsx>{`
+
         .our-team-section {
           width: 100%;
           background: white;
@@ -108,7 +104,6 @@ export default function OurTeamSection() {
           outline-offset: -0.5px;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
           align-items: center;
           gap: 40px;
           padding-bottom: 40px;
@@ -116,22 +111,20 @@ export default function OurTeamSection() {
 
         .team-banner {
           width: 100%;
-          height: 500px;
+          height: 580px;
           position: relative;
           overflow: hidden;
-          flex-shrink: 0;
           background: #f5f5f5;
         }
 
         .team-banner-image {
           object-fit: cover;
-          object-position: center 28%;
+          object-position: center 32%;
         }
 
         .team-content-wrap {
           display: flex;
           flex-direction: column;
-          justify-content: center;
           align-items: center;
           gap: 33px;
           width: 100%;
@@ -140,19 +133,9 @@ export default function OurTeamSection() {
           box-sizing: border-box;
         }
 
-        .team-content-inner {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 32px;
-          width: 100%;
-        }
-
         .team-heading-group {
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
           align-items: center;
           gap: 12px;
           width: 100%;
@@ -160,7 +143,6 @@ export default function OurTeamSection() {
 
         .team-label-row {
           display: inline-flex;
-          justify-content: flex-start;
           align-items: center;
           gap: 6px;
         }
@@ -169,7 +151,6 @@ export default function OurTeamSection() {
           width: 14px;
           height: 14px;
           background: #ff850b;
-          flex-shrink: 0;
         }
 
         .team-label-text {
@@ -177,7 +158,6 @@ export default function OurTeamSection() {
           font-size: 14px;
           font-family: Epilogue, sans-serif;
           font-weight: 600;
-          line-height: 1;
         }
 
         .team-title {
@@ -188,15 +168,11 @@ export default function OurTeamSection() {
           font-weight: 700;
           line-height: 1.12;
           text-align: center;
-          max-width: 780px;
         }
 
         .team-description {
           width: 100%;
-          color: black;
           font-size: 16px;
-          font-family: Epilogue, sans-serif;
-          font-weight: 400;
           line-height: 26px;
         }
 
@@ -206,18 +182,14 @@ export default function OurTeamSection() {
 
         .team-divider {
           width: 458px;
-          height: 0;
           border-top: 2px solid #e9e9e9;
         }
 
         .highlights-grid {
           width: 100%;
           display: flex;
-          justify-content: flex-start;
-          align-items: center;
           gap: 22px;
           flex-wrap: wrap;
-          align-content: center;
         }
 
         .highlight-card {
@@ -225,23 +197,18 @@ export default function OurTeamSection() {
           min-height: 76px;
           padding: 8px;
           background: white;
-          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 4px rgba(0,0,0,0.25);
           border-radius: 40px;
           display: flex;
-          justify-content: flex-start;
           align-items: center;
           gap: 14px;
-          box-sizing: border-box;
         }
 
         .highlight-number-box {
           width: 60px;
           height: 60px;
-          position: relative;
           background: #014e4e;
-          overflow: hidden;
           border-radius: 32px;
-          flex-shrink: 0;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -250,30 +217,21 @@ export default function OurTeamSection() {
         .highlight-number {
           color: white;
           font-size: 24px;
-          font-family: "Century Gothic", sans-serif;
           font-weight: 800;
-          line-height: 30px;
-          text-align: center;
         }
 
         .highlight-label {
-          color: black;
           font-size: 18px;
-          font-family: "Century Gothic", sans-serif;
           font-weight: 600;
-          line-height: 30px;
         }
 
         .team-gallery {
           width: 100%;
           max-width: 1152px;
           display: flex;
-          justify-content: flex-start;
-          align-items: flex-start;
           gap: 24px;
           flex-wrap: wrap;
           padding: 0 20px;
-          box-sizing: border-box;
         }
 
         .gallery-card {
@@ -282,135 +240,47 @@ export default function OurTeamSection() {
           position: relative;
           border-radius: 16px;
           overflow: hidden;
-          flex-shrink: 0;
         }
 
         .gallery-image {
           object-fit: cover;
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width:1024px) {
+
           .team-banner {
-            height: 420px;
-          }
-
-          .team-banner-image {
-            object-fit: cover;
-            object-position: center 24%;
-          }
-
-          .team-title {
-            font-size: 34px;
-          }
-
-          .highlight-label {
-            font-size: 16px;
-            line-height: 24px;
+            height: 500px;
           }
 
           .gallery-card {
             width: calc(50% - 12px);
           }
+
         }
 
-  @media (max-width: 767px) {
-  .our-team-section {
-    gap: 28px;
-    padding-bottom: 28px;
-    border-radius: 22px;
-  }
+        /* ONLY MOBILE CHANGE */
 
-  .team-banner {
-    height: 245px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 12px;
-    width: calc(100% - 24px);
-    border-radius: 18px;
-  }
+        @media (max-width:767px) {
 
-  .team-banner-image {
-    object-fit: cover;
-    object-position: center 22%;
-  }
+          .team-banner {
+            height: 300px;
+          }
 
-  .team-content-wrap {
-    gap: 26px;
-    padding: 0 16px;
-  }
+          .team-banner-image {
+            object-position: center 10%; /* moved upward */
+          }
 
-  .team-content-inner {
-    gap: 24px;
-  }
+          .team-title {
+            font-size: 28px;
+          }
 
-  .team-heading-group {
-    gap: 10px;
-  }
+          .gallery-card {
+            width: calc(50% - 8px);
+            height: 130px;
+          }
 
-  .team-title {
-    font-size: 28px;
-    line-height: 1.08;
-    max-width: 340px;
-  }
-
-  .team-description {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .team-divider {
-    width: 100%;
-    max-width: 330px;
-  }
-
-  .highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    width: 100%;
-  }
-
-  .highlight-card {
-    width: 100%;
-    min-height: 186px;
-    border-radius: 22px;
-    padding: 14px 10px 16px;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 18px;
-    text-align: center;
-  }
-
-  .highlight-number-box {
-    width: 90px;
-    height: 88px;
-    border-radius: 16px;
-  }
-
-  .highlight-number {
-    font-size: 30px;
-    line-height: 1;
-  }
-
-  .highlight-label {
-    font-size: 14px;
-    line-height: 1.25;
-    max-width: 140px;
-  }
-
-  .team-gallery {
-    padding: 0 16px;
-    gap: 16px;
-  }
-
-  .gallery-card {
-    width: calc(50% - 8px);
-    height: 130px;
-    border-radius: 16px;
-  }
-}
         }
+
       `}</style>
     </>
   );

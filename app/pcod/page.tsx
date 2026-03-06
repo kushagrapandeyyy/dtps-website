@@ -360,222 +360,354 @@ alt="Email Icon"
 </div>
      
 
-      {/* What You Will Get - Mobile */}
-      <section className="pcod-benefits-sec md:hidden py-8 px-4">
-        <div className="pcod-benefits-wrap">
-          <div className="flex flex-col gap-6">
-            <div className="pcod-img-card">
-              <div className="pcod-img-frame rounded-xl overflow-hidden">
-                <Image 
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/file-1536x1024-1.webp" 
-                  alt="Benefits" 
-                  width={500} 
-                  height={300} 
-                  className="object-cover w-full h-[200px]" 
-                />
-              </div>
-              <div className="pcod-float-badge">
-                <p className="pcod-badge-num text-xl">100%</p>
-                <p className="pcod-badge-lbl text-xs">Natural</p>
-              </div>
-            </div>
+{/* WHAT YOU WILL GET SECTION */}
 
-            <div className="pcod-benefits-head">
-              <div className="pcod-mini-label justify-center">
-                <span className="pcod-mini-line"></span>
-                <span className="pcod-mini-text text-xs">YOUR BENEFITS</span>
-              </div>
-              <h2 className="pcod-benefits-title text-2xl">What You Will Get?</h2>
+<section className="w-full py-8 md:py-14">
 
-              <div className="pcod-benefits-list gap-3">
-                {whatYouGet.map((item, index) => (
-                  <div key={index} className="pcod-benefit-item p-3 rounded-xl">
-                    <div className="pcod-benefit-ic w-10 h-10 text-base">{item.icon}</div>
-                    <div>
-                      <h4 className="text-sm">{item.title}</h4>
-                      <p className="text-xs">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+  <div className="max-w-[1200px] mx-auto px-4">
 
-              <div className="pcod-benefits-cta mt-4">
-                <a className="pcod-btn-teal text-sm py-3 px-6" href="/appointment">
-                  Explore All Benefits
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+    {/* grey container */}
+    <div className="bg-[#EAEEF1] rounded-[24px] p-4 md:p-10">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+        {/* LEFT IMAGE */}
+
+        <div className="flex justify-center">
+
+          <div className="bg-[#EAEEF1] rounded-[18px] overflow-hidden w-full max-w-[330px] md:max-w-[520px]">
+
+            <Image
+              src="/images/3 girl.png"
+              alt="Dietician Team"
+              width={600}
+              height={800}
+              className="w-full h-auto object-contain"
+            />
+
           </div>
+
         </div>
-      </section>
 
-      {/* What You Will Get - Desktop */}
-      <section className="pcod-benefits-sec hidden md:block">
-        <div className="pcod-benefits-wrap">
-          <div className="pcod-benefits-grid-2">
-            <div className="pcod-img-card">
-              <div className="pcod-img-frame">
-                <Image 
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/file-1536x1024-1.webp" 
-                  alt="Benefits" 
-                  width={500} 
-                  height={400} 
-                  className="object-cover w-full h-full" 
-                />
-              </div>
-              <div className="pcod-float-badge">
-                <p className="pcod-badge-num">100%</p>
-                <p className="pcod-badge-lbl">Natural</p>
-              </div>
-            </div>
+        {/* RIGHT SIDE */}
 
-            <div className="pcod-benefits-head">
-              <div className="pcod-mini-label">
-                <span className="pcod-mini-line"></span>
-                <span className="pcod-mini-text">YOUR BENEFITS</span>
-              </div>
-              <h2 className="pcod-benefits-title">What You Will Get?</h2>
+        <div className="flex flex-col items-center md:items-start">
 
-              <div className="pcod-benefits-list">
-                {whatYouGet.map((item, index) => (
-                  <div key={index} className="pcod-benefit-item">
-                    <div className="pcod-benefit-ic">{item.icon}</div>
-                    <div>
-                      <h4>{item.title}</h4>
-                      <p>{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* TITLE */}
 
-              <div className="pcod-benefits-cta">
-                <a className="pcod-btn-teal" href="/appointment">
-                  Explore All Benefits
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <h2 className="text-[24px] md:text-[46px] font-bold text-center md:text-left mb-6">
 
-      {/* Ghar Ka Khana Section - Mobile */}
-      <section className="pcod-gkk-section md:hidden py-8 px-4">
-        <div className="pcod-gkk-wrap">
-          <div className="pcod-gkk-panel p-4 rounded-2xl">
-            <div className="pcod-gkk-title mb-6">
-              <h2 className="text-xl text-center">How <b>GHAR KA KHANA</b> Diet Plan Fixes PCOD &amp; WEIGHT</h2>
-            </div>
+            <span className="text-[#1E1E1E]">What You Will </span>
 
-            {/* Mobile: Image on top, then cards list */}
-            <div className="flex flex-col gap-4">
-              <div className="pcod-gkk-center mx-auto">
-                <Image 
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/table.png" 
-                  alt="Healthy plate" 
-                  width={280} 
-                  height={200} 
-                  className="object-contain" 
-                />
-              </div>
+            <span className="text-[#FF850B]">Get</span>
 
-              {/* Benefits as vertical list on mobile */}
-              <div className="flex flex-col gap-3">
-                {gkkBenefits.map((benefit, index) => (
-                  <div 
-                    key={index} 
-                    className={`p-4 rounded-xl border ${activeCard === index ? 'bg-[#f57c00] border-[#f57c00]' : 'bg-white/10 border-white/10'}`}
-                    onClick={() => setActiveCard(index)}
-                  >
-                    <h4 className={`text-sm font-bold mb-1 ${activeCard === index ? 'text-white' : 'text-[#f57c00]'}`}>{benefit.title}</h4>
-                    <p className={`text-xs ${activeCard === index ? 'text-white' : 'text-white/70'}`}>{benefit.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <span className="text-[#1E1E1E]">?</span>
 
-            <div className="grid grid-cols-1 gap-3 mt-6">
-              <div className="pcod-gkk-mini p-4 rounded-xl">
-                <div className="emoji text-xl mb-2">💯</div>
-                <h5 className="text-sm">100% Natural</h5>
-                <p className="text-xs">No supplements or artificial ingredients</p>
-              </div>
-              <div className="pcod-gkk-mini p-4 rounded-xl">
-                <div className="emoji text-xl mb-2">👩‍⚕️</div>
-                <h5 className="text-sm">Expert Guided</h5>
-                <p className="text-xs">Personalized plans by certified dietitians</p>
-              </div>
-              <div className="pcod-gkk-mini p-4 rounded-xl">
-                <div className="emoji text-xl mb-2">🎯</div>
-                <h5 className="text-sm">Proven Results</h5>
-                <p className="text-xs">Thousands of success stories</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </h2>
 
-      {/* Ghar Ka Khana Section - Desktop */}
-      <section className="pcod-gkk-section hidden md:block">
-        <div className="pcod-gkk-wrap">
-          <div className="pcod-gkk-panel">
-            <div className="pcod-gkk-title">
-              <h2>How <b>GHAR KA KHANA</b> Diet Plan Fixes PCOD &amp; WEIGHT</h2>
-            </div>
+          {/* CARDS */}
 
-            <div className="pcod-gkk-diagram">
-              <div className="pcod-gkk-center">
-                <Image 
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/12/table.png" 
-                  alt="Healthy plate" 
-                  width={520} 
-                  height={360} 
-                  className="object-contain" 
-                />
-              </div>
+          <div className="w-full flex flex-col gap-4">
 
-              {gkkBenefits.map((benefit, index) => (
-                <div 
-                  key={index} 
-                  className={`pcod-gkk-card pcod-gkk-pos-${index} ${activeCard === index ? 'active' : ''}`}
-                  onClick={() => setActiveCard(index)}
-                >
-                  <div className="pcod-gkk-bg"></div>
-                  <div className="pcod-gkk-content">
-                    <h4>{benefit.title}</h4>
-                    <p>{benefit.desc}</p>
-                  </div>
+            {[
+              {
+                title: "Ongoing Support",
+                desc: "Regular follow-ups to adapt your diet plan as needed and ensure progress results.",
+                icon: "/images/Ongoing Support.png",
+              },
+              {
+                title: "Specialised Care",
+                desc: "Your diet is managed by dietitians who are specialised in hormonal disorders.",
+                icon: "/images/Specialised Care.png",
+              },
+              {
+                title: "Tailored to You",
+                desc: "Every diet plan is crafted to meet your unique health needs and lifestyle preferences.",
+                icon: "/images/tailored.png",
+              },
+              {
+                title: "Sustainable Weight Management",
+                desc: "We focus on long-term lifestyle changes for lasting success.",
+                icon: "/images/Sustainable.png",
+              },
+            ].map((item, index) => (
+
+              <div
+                key={index}
+                className="flex items-center gap-4 bg-[#FF850B] rounded-[16px] p-4"
+              >
+
+                {/* ICON BOX */}
+
+                <div className="bg-[#014E4E] w-[60px] h-[60px] md:w-[100px] md:h-[100px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+
                 </div>
-              ))}
-            </div>
 
-            <div className="pcod-gkk-mini-row">
-              <div className="pcod-gkk-mini">
-                <div className="emoji">💯</div>
-                <h5>100% Natural</h5>
-                <p>No supplements or artificial ingredients</p>
+                {/* TEXT */}
+
+                <div className="text-left">
+
+                  <h4 className="text-white font-bold text-[16px] md:text-[20px] leading-tight">
+
+                    {item.title}
+
+                  </h4>
+
+                  <p className="text-white text-[12px] md:text-[13px] leading-[18px] mt-1">
+
+                    {item.desc}
+
+                  </p>
+
+                </div>
+
               </div>
-              <div className="pcod-gkk-mini">
-                <div className="emoji">👩‍⚕️</div>
-                <h5>Expert Guided</h5>
-                <p>Personalized plans by certified dietitians</p>
-              </div>
-              <div className="pcod-gkk-mini">
-                <div className="emoji">🎯</div>
-                <h5>Proven Results</h5>
-                <p>Thousands of success stories</p>
-              </div>
-            </div>
+
+            ))}
+
           </div>
+
         </div>
-      </section>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+ {/* Ghar Ka Khana Section */}
+
+<section className="py-16 px-4">
+
+<div className="max-w-[1280px] mx-auto">
+
+<div className="bg-[#014E4E] rounded-[24px] px-6 md:px-16 py-14">
+
+{/* TITLE */}
+
+<h2 className="text-center text-white text-[26px] md:text-[48px] font-bold leading-tight mb-12">
+
+How <span className="text-[#FF850B]">GHAR KA KHANA</span> Diet Plan  
+<br className="hidden md:block"/>
+Fixes PCOD & WEIGHT
+
+</h2>
+
+
+{/* DESKTOP LAYOUT */}
+
+<div className="hidden md:grid grid-cols-3 items-center gap-10">
+
+
+{/* LEFT SIDE */}
+
+<div className="flex flex-col gap-10">
+
+<div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl p-4">
+
+<div className="w-[48px] h-[48px] bg-[#FF850B] rounded flex items-center justify-center">
+<Image src="/images/hormone.png" alt="" width={26} height={26}/>
+</div>
+
+<div>
+<h4 className="text-[#FF850B] font-semibold text-[16px]">Hormones Balanced</h4>
+<p className="text-white text-[14px]">Regular cycles, better mood</p>
+</div>
+
+</div>
+
+
+<div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl p-4">
+
+<div className="w-[48px] h-[48px] bg-[#FF850B] rounded flex items-center justify-center">
+<Image src="/images/weightloss.png" alt="" width={26} height={26}/>
+</div>
+
+<div>
+<h4 className="text-[#FF850B] font-semibold text-[16px]">Weight Loss</h4>
+<p className="text-white text-[14px]">Sustainable and healthy reduction</p>
+</div>
+
+</div>
+
+</div>
+
+
+{/* CENTER IMAGE */}
+
+<div className="flex justify-center">
+
+<Image
+src="/images/table.png"
+alt="Healthy Plate"
+width={240}
+height={240}
+/>
+
+</div>
+
+
+{/* RIGHT SIDE */}
+
+<div className="flex flex-col gap-10">
+
+<div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl p-4">
+
+<div className="w-[48px] h-[48px] bg-[#FF850B] rounded flex items-center justify-center">
+<Image src="/images/energy.png" alt="" width={26} height={26}/>
+</div>
+
+<div>
+<h4 className="text-[#FF850B] font-semibold text-[16px]">Energy Boost</h4>
+<p className="text-white text-[14px]">Feel more active and vibrant</p>
+</div>
+
+</div>
+
+
+<div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl p-4">
+
+<div className="w-[48px] h-[48px] bg-[#FF850B] rounded flex items-center justify-center">
+<Image src="/images/skin.png" alt="" width={26} height={26}/>
+</div>
+
+<div>
+<h4 className="text-[#FF850B] font-semibold text-[16px]">Better Skin</h4>
+<p className="text-white text-[14px]">Clear, glowing, and healthy</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+{/* TOP CARD */}
+
+<div className="hidden md:flex justify-center mt-10">
+
+<div className="flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl p-4">
+
+<div className="w-[48px] h-[48px] bg-[#FF850B] rounded flex items-center justify-center">
+<Image src="/images/inflammation.png" alt="" width={26} height={26}/>
+</div>
+
+<div>
+<h4 className="text-[#FF850B] font-semibold text-[16px]">Inflammation down</h4>
+<p className="text-white text-[14px]">Less bloating, less pain, better skin</p>
+</div>
+
+</div>
+
+</div>
+
+
+
+{/* MOBILE VERSION */}
+
+<div className="md:hidden mt-6">
+
+<div className="flex justify-center mb-6">
+
+<Image
+src="/images/table.png"
+alt="Healthy Plate"
+width={200}
+height={200}
+/>
+
+</div>
+
+
+<div className="relative pl-6 border-l border-white/40 space-y-4">
+
+{gkkBenefits.map((item,index)=>(
+<div key={index} className="flex gap-3">
+
+<div className="w-3 h-3 bg-[#FF850B] rounded-full mt-2"></div>
+
+<div className="flex gap-3 bg-white/10 border border-white/20 rounded-xl p-3 w-full">
+
+<div className="w-[40px] h-[40px] bg-[#FF850B] rounded flex items-center justify-center">
+<Image src={item.icon} alt="" width={22} height={22}/>
+</div>
+
+<div>
+<h4 className="text-[#FF850B] font-semibold text-[14px]">{item.title}</h4>
+<p className="text-white text-[12px]">{item.desc}</p>
+</div>
+
+</div>
+
+</div>
+))}
+
+</div>
+
+</div>
+
+
+
+{/* BOTTOM CARDS */}
+
+<div className="grid md:grid-cols-3 gap-6 mt-14">
+
+<div className="bg-white/10 border border-white/20 rounded-xl p-6 text-center">
+
+<div className="flex justify-center mb-2">
+<Image src="/images/natural.png" alt="" width={32} height={32}/>
+</div>
+
+<h5 className="text-[#FF850B] font-semibold">100% Natural</h5>
+<p className="text-white text-sm">No supplements or artificial ingredients</p>
+
+</div>
+
+
+<div className="bg-white/10 border border-white/20 rounded-xl p-6 text-center">
+
+<div className="flex justify-center mb-2">
+<Image src="/images/expert.png" alt="" width={32} height={32}/>
+</div>
+
+<h5 className="text-[#FF850B] font-semibold">Expert Guided</h5>
+<p className="text-white text-sm">Personalized plans by certified dietitians</p>
+
+</div>
+
+
+<div className="bg-white/10 border border-white/20 rounded-xl p-6 text-center">
+
+<div className="flex justify-center mb-2">
+<Image src="/images/results.png" alt="" width={32} height={32}/>
+</div>
+
+<h5 className="text-[#FF850B] font-semibold">Proven Results</h5>
+<p className="text-white text-sm">Thousands of success stories</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
 
       {/* Transformation Gallery Section */}
       <TransformationGallery 
