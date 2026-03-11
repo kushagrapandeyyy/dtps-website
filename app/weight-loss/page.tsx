@@ -217,35 +217,40 @@ export default function WeightLossPage() {
         />
       </PageWrapper>
 
-      {/* ═════ TESTIMONIALS GALLERY ═════ */}
-      <section className="py-12 md:py-20 px-4 md:px-12 lg:px-[120px]">
-        <div className="max-w-[1000px] mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
-            <div className="max-w-[630px]">
-              <SectionLabel>Our Testimonials</SectionLabel>
-              <SectionTitle className="text-[#1E1E1E] mt-2">
-                Over 75,000+<br />People Enjoy Weight Loss
-              </SectionTitle>
-              <p className="text-[#828283] text-[12px] md:text-[14px] mt-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Join our Plan today and embark on a journey to better health with our weight loss plan!
-              </p>
-            </div>
-            {/* Dots indicator */}
-            <div className="flex gap-1 items-center">
-              {[6,6,6,18,6,6].map((w, i) => (
-                <div key={i} className={`h-[6px] rounded-full ${w === 18 ? 'bg-[#FF850B] w-[18px]' : 'bg-[#014E4E] w-[6px]'}`} />
-              ))}
-            </div>
-          </div>
-          {/* Use existing TransformationGallery for real data */}
-          <TransformationGallery
-            page="weight-loss"
-            title=""
-            subtitle=""
-            maxItems={6}
-          />
-        </div>
-      </section>
+ {/* ═════ TESTIMONIALS GALLERY ═════ */}
+<section className="py-12 md:py-20 px-4 md:px-12 lg:px-[120px]">
+  <div className="max-w-[1000px] mx-auto">
+
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
+
+      <div className="max-w-[630px]">
+        <SectionLabel>Our Testimonials</SectionLabel>
+
+        <SectionTitle className="text-[#1E1E1E] mt-2">
+          Over 75,000+<br />
+          People Enjoy Weight Loss
+        </SectionTitle>
+
+        <p
+          className="text-[#828283] text-[12px] md:text-[14px] mt-2"
+          style={{ fontFamily: "Inter, sans-serif" }}
+        >
+          Join our Plan today and embark on a journey to better health with our weight loss plan!
+        </p>
+      </div>
+
+    </div>
+
+    {/* Transformation Cards Slider */}
+    <TransformationGallery
+      page="weight-loss"
+      title=""
+      subtitle=""
+      maxItems={6}
+    />
+
+  </div>
+</section>
 
       {/* ═════ FIVE CYCLE PROGRAM ═════ */}
       <section className="px-4 md:px-12 lg:px-[120px]">
@@ -458,68 +463,130 @@ export default function WeightLossPage() {
         )}
       </section>
 
-      {/* ═════ CLIENT TESTIMONIALS ═════ */}
-      <section className="py-12 md:py-20 px-4 md:px-12 lg:px-[120px]">
-        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row items-start gap-10">
-          {/* Left: heading + cards */}
-          <div className="flex-1">
-            <SectionLabel>Our Testimonials</SectionLabel>
-            <SectionTitle className="text-[#1E1E1E] mt-2 mb-8">
-              Success stories from<br />our clients
-            </SectionTitle>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {testimonials.slice(0, 4).map((t, index) => {
-                const highlighted = index === 0;
-                return (
-                  <div
-                    key={index}
-                    className={`relative rounded-[17px] p-5 border border-[#F1F1F1] overflow-hidden ${
-                      highlighted ? 'bg-[#FF850B]' : 'bg-white'
-                    }`}
-                  >
-                    {/* Stars */}
-                    <div className="flex gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className={`text-[12px] ${highlighted ? 'text-[#014E4E]' : 'text-[#FF850B]'}`}>★</span>
-                      ))}
-                    </div>
-                    {/* Quote */}
-                    <p className={`text-[13px] leading-[1.6] mb-4 ${highlighted ? 'text-[#1E1E1E]' : 'text-[#828283]'}`} style={{ fontFamily: 'Inter, sans-serif' }}>
-                      &ldquo;{t.content}&rdquo;
-                    </p>
-                    {/* Author */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-[35px] h-[35px] rounded-full overflow-hidden shrink-0 relative">
-                        <Image src={t.image} alt={t.name} fill className="object-cover" />
+      {/* Testimonials Section */}
+      <div className="section-wrapper">
+        <section className="bg-white py-12 md:py-20 px-4 md:px-8 rounded-[30px]">
+          <div className="max-w-[1200px] mx-auto">
+
+            {/* Section Header */}
+            <div className="text-center mb-8 md:mb-12">
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <span className="text-[#ff9100] text-lg md:text-xl">✦</span>
+                <span className="text-teal-600 font-semibold text-sm md:text-base">
+                  Our Testimonials
+                </span>
+              </div>
+
+              <h2 className="text-[1.75rem] md:text-[2.5rem] font-bold text-gray-900 leading-tight">
+                Success stories from our clients
+              </h2>
+            </div>
+
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+              {/* Left - Testimonial Cards */}
+              <div className="flex-1 w-full lg:min-w-[400px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
+                  {testimonials.slice(0, 4).map((testimonial, index) => (
+                    <div
+                      key={testimonial._id || index}
+                      className={`rounded-[20px] p-4 md:p-6 cursor-pointer transition-all duration-300 hover:-translate-y-1 ${
+                        index === 1
+                          ? "bg-[#ff9100] shadow-[0_10px_30px_rgba(255,145,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,145,0,0.4)]"
+                          : "bg-white shadow-[0_5px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)]"
+                      }`}
+                    >
+                      <div
+                        className={`mb-3 text-base md:text-lg tracking-widest ${
+                          index === 1 ? "text-white" : "text-[#ff9100]"
+                        }`}
+                      >
+                        ★★★★★
                       </div>
-                      <div>
-                        <p className="text-[#1E1E1E] font-semibold text-[15px]" style={{ fontFamily: 'var(--font-epilogue), Epilogue, sans-serif' }}>{t.name}</p>
-                        {t.role && <p className={`text-[13px] ${highlighted ? 'text-[#1E1E1E]' : 'text-[#828283]'}`} style={{ fontFamily: 'Inter, sans-serif' }}>{t.role}</p>}
+
+                      <p
+                        className={`text-[0.85rem] md:text-[0.95rem] leading-relaxed mb-4 italic ${
+                          index === 1 ? "text-white" : "text-gray-600"
+                        }`}
+                      >
+                        &ldquo;{testimonial.content}&rdquo;
+                      </p>
+
+                      <div
+                        className={`flex items-center gap-3 pt-3 ${
+                          index === 1
+                            ? "border-t border-white/20"
+                            : "border-t border-gray-200"
+                        }`}
+                      >
+                        <div
+                          className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base ${
+                            index === 1 ? "bg-white/20" : "bg-teal-600"
+                          }`}
+                        >
+                          {testimonial.name.charAt(0)}
+                        </div>
+
+                        <div
+                          className={`font-bold ${
+                            index === 1 ? "text-white" : "text-gray-900"
+                          }`}
+                        >
+                          {testimonial.name}
+                        </div>
                       </div>
                     </div>
+                  ))}
+
+                </div>
+              </div>
+
+              {/* Right - Stats and Badge */}
+              <div className="flex-1 w-full lg:min-w-[350px] relative h-auto lg:h-[450px]">
+
+                <div className="bg-[#0b4c4c] rounded-[30px] p-8 md:p-12 text-white h-full flex flex-col justify-center relative overflow-hidden">
+
+                  {/* Background decoration */}
+                  <div className="absolute -top-[50px] -right-[50px] w-[200px] h-[200px] rounded-full bg-[rgba(255,145,0,0.1)]" />
+                  <div className="absolute -bottom-[30px] -left-[30px] w-[150px] h-[150px] rounded-full bg-[rgba(0,150,136,0.2)]" />
+
+                  <div className="relative z-10">
+
+                    <div className="text-[3rem] md:text-[5rem] font-extrabold leading-none mb-2">
+                      75K<span className="text-[#ff9100]">+</span>
+                    </div>
+
+                    <div className="text-lg md:text-2xl font-semibold mb-4 md:mb-6 opacity-90">
+                      Happy Clients
+                    </div>
+
+                    <div className="flex items-center gap-2 bg-white/10 py-2 md:py-3 px-3 md:px-4 rounded-xl w-fit text-sm md:text-base">
+                      <span className="text-[#ff9100] text-lg md:text-2xl">★</span>
+                      <span className="text-lg md:text-xl font-semibold">4.9</span>
+                      <span className="opacity-80 text-xs md:text-sm">Average Rating</span>
+                    </div>
+
+                    {/* Trust badges */}
+                    <div className="flex gap-2 md:gap-4 mt-6 md:mt-8 flex-wrap">
+                      <div className="bg-[#ff9100] py-1.5 md:py-2 px-3 md:px-4 rounded-lg text-xs md:text-sm font-semibold">
+                        ✓ Verified Reviews
+                      </div>
+
+                      <div className="bg-white/15 py-1.5 md:py-2 px-3 md:px-4 rounded-lg text-xs md:text-sm font-semibold">
+                        ✓ 25+ Years Trust
+                      </div>
+                    </div>
+
                   </div>
-                );
-              })}
+                </div>
+
+              </div>
             </div>
+
           </div>
-          {/* Right: photo collage */}
-          <div className="relative w-full lg:w-[500px] h-[450px] md:h-[550px] shrink-0 hidden lg:block">
-            <div className="absolute left-[10px] top-0 w-[260px] h-[380px] rounded-[26px] overflow-hidden">
-              <Image src={heroImage1} alt="Success" fill className="object-cover" />
-            </div>
-            <div className="absolute left-[240px] top-0 w-[200px] h-[260px] rounded-[26px] overflow-hidden border-4 border-white">
-              <Image src={heroImage2} alt="Success" fill className="object-cover" />
-            </div>
-            <div className="absolute left-0 top-[300px] w-[280px] h-[180px] rounded-[26px] overflow-hidden border-4 border-white">
-              <Image src={heroImage3} alt="Success" fill className="object-cover" />
-            </div>
-            <div className="absolute left-[310px] top-[400px] bg-[#014E4E] rounded-[24px] w-[177px] h-[106px] flex flex-col items-center justify-center text-white">
-              <span className="font-bold text-[32px]" style={{ fontFamily: 'Inter, sans-serif' }}>75,000+</span>
-              <span className="font-medium text-[14px] uppercase" style={{ fontFamily: 'Inter, sans-serif' }}>Transformation</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 }

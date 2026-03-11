@@ -796,88 +796,130 @@ export default function HomePage() {
         <OurBlogsSection />
       </div>
 
-      {/* Testimonials Section */}
-      <div className="section-wrapper">
-      <section className="bg-white py-20 px-4 md:px-8 rounded-[30px]">
+    {/* Testimonials Section */}
+    <div className="section-wrapper">
+      <section className="bg-white py-12 md:py-20 px-4 md:px-8 rounded-[30px]">
         <div className="max-w-[1200px] mx-auto">
+
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <div className="flex items-center justify-center gap-2 mb-2">
-              <span className="text-[#ff9100] text-xl">✦</span>
-              <span className="text-teal-600 font-semibold text-base">Our Testimonials</span>
+              <span className="text-[#ff9100] text-lg md:text-xl">✦</span>
+              <span className="text-teal-600 font-semibold text-sm md:text-base">
+                Our Testimonials
+              </span>
             </div>
-            <h2 className="text-[2.5rem] font-bold text-gray-900 leading-tight">
+
+            <h2 className="text-[1.75rem] md:text-[2.5rem] font-bold text-gray-900 leading-tight">
               Success stories from our clients
             </h2>
           </div>
-          
-          <div className="flex gap-12 flex-wrap items-start">
+
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
             {/* Left - Testimonial Cards */}
-            <div className="flex-1 min-w-[400px]">
-              <div className="grid grid-cols-2 gap-6">
+            <div className="flex-1 w-full lg:min-w-[400px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+
                 {testimonials.slice(0, 4).map((testimonial, index) => (
-                  <div 
+                  <div
                     key={testimonial._id || index}
-                    className={`rounded-[20px] p-6 cursor-pointer transition-all duration-300 hover:-translate-y-1 ${
-                      index === 1 
-                        ? 'bg-[#ff9100] shadow-[0_10px_30px_rgba(255,145,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,145,0,0.4)]' 
-                        : 'bg-white shadow-[0_5px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)]'
+                    className={`rounded-[20px] p-4 md:p-6 cursor-pointer transition-all duration-300 hover:-translate-y-1 ${
+                      index === 1
+                        ? "bg-[#ff9100] shadow-[0_10px_30px_rgba(255,145,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,145,0,0.4)]"
+                        : "bg-white shadow-[0_5px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.12)]"
                     }`}
                   >
-                    <div className={`mb-3 text-lg tracking-widest ${index === 1 ? 'text-white' : 'text-[#ff9100]'}`}>★★★★★</div>
-                    <p className={`text-[0.95rem] leading-relaxed mb-4 italic ${index === 1 ? 'text-white' : 'text-gray-600'}`}>
+                    <div
+                      className={`mb-3 text-base md:text-lg tracking-widest ${
+                        index === 1 ? "text-white" : "text-[#ff9100]"
+                      }`}
+                    >
+                      ★★★★★
+                    </div>
+
+                    <p
+                      className={`text-[0.85rem] md:text-[0.95rem] leading-relaxed mb-4 italic ${
+                        index === 1 ? "text-white" : "text-gray-600"
+                      }`}
+                    >
                       &ldquo;{testimonial.content}&rdquo;
                     </p>
-                    <div className={`flex items-center gap-3 pt-3 ${index === 1 ? 'border-t border-white/20' : 'border-t border-gray-200'}`}>
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base ${
-                        index === 1 ? 'bg-white/20' : 'bg-teal-600'
-                      }`}>
+
+                    <div
+                      className={`flex items-center gap-3 pt-3 ${
+                        index === 1
+                          ? "border-t border-white/20"
+                          : "border-t border-gray-200"
+                      }`}
+                    >
+                      <div
+                        className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-base ${
+                          index === 1 ? "bg-white/20" : "bg-teal-600"
+                        }`}
+                      >
                         {testimonial.name.charAt(0)}
                       </div>
-                      <div className={`font-bold ${index === 1 ? 'text-white' : 'text-gray-900'}`}>{testimonial.name}</div>
+
+                      <div
+                        className={`font-bold ${
+                          index === 1 ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        {testimonial.name}
+                      </div>
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
-            
+
             {/* Right - Stats and Badge */}
-            <div className="flex-1 min-w-[350px] relative h-[450px]">
-              {/* Main Stats Card */}
-              <div className="bg-[#0b4c4c] rounded-[30px] p-12 text-white h-full flex flex-col justify-center relative overflow-hidden">
+            <div className="flex-1 w-full lg:min-w-[350px] relative h-auto lg:h-[450px]">
+
+              <div className="bg-[#0b4c4c] rounded-[30px] p-8 md:p-12 text-white h-full flex flex-col justify-center relative overflow-hidden">
+
                 {/* Background decoration */}
                 <div className="absolute -top-[50px] -right-[50px] w-[200px] h-[200px] rounded-full bg-[rgba(255,145,0,0.1)]" />
                 <div className="absolute -bottom-[30px] -left-[30px] w-[150px] h-[150px] rounded-full bg-[rgba(0,150,136,0.2)]" />
-                
+
                 <div className="relative z-10">
-                  <div className="text-[5rem] font-extrabold leading-none mb-2">
-                    15K<span className="text-[#ff9100]">+</span>
+
+                  <div className="text-[3rem] md:text-[5rem] font-extrabold leading-none mb-2">
+                    75K<span className="text-[#ff9100]">+</span>
                   </div>
-                  <div className="text-2xl font-semibold mb-6 opacity-90">
+
+                  <div className="text-lg md:text-2xl font-semibold mb-4 md:mb-6 opacity-90">
                     Happy Clients
                   </div>
-                  <div className="flex items-center gap-2 bg-white/10 py-3 px-4 rounded-xl w-fit">
-                    <span className="text-[#ff9100] text-2xl">★</span>
-                    <span className="text-xl font-semibold">4.9</span>
-                    <span className="opacity-80 text-sm">Average Rating</span>
+
+                  <div className="flex items-center gap-2 bg-white/10 py-2 md:py-3 px-3 md:px-4 rounded-xl w-fit text-sm md:text-base">
+                    <span className="text-[#ff9100] text-lg md:text-2xl">★</span>
+                    <span className="text-lg md:text-xl font-semibold">4.9</span>
+                    <span className="opacity-80 text-xs md:text-sm">Average Rating</span>
                   </div>
-                  
+
                   {/* Trust badges */}
-                  <div className="flex gap-4 mt-8 flex-wrap">
-                    <div className="bg-[#ff9100] py-2 px-4 rounded-lg text-sm font-semibold">
+                  <div className="flex gap-2 md:gap-4 mt-6 md:mt-8 flex-wrap">
+                    <div className="bg-[#ff9100] py-1.5 md:py-2 px-3 md:px-4 rounded-lg text-xs md:text-sm font-semibold">
                       ✓ Verified Reviews
                     </div>
-                    <div className="bg-white/15 py-2 px-4 rounded-lg text-sm font-semibold">
+
+                    <div className="bg-white/15 py-1.5 md:py-2 px-3 md:px-4 rounded-lg text-xs md:text-sm font-semibold">
                       ✓ 25+ Years Trust
                     </div>
                   </div>
+
                 </div>
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
-      </div>
+    </div>
     </div>
   );
 }
