@@ -487,439 +487,287 @@ export default function WeddingPlanPage() {
         </div>
       </section>
 
-{/* Five Step Cycle Program Section */}
-<section className="bg-white py-12 md:py-20 px-4 md:px-5">
+{/* ================= MOBILE ONLY SVG ================= */}
 
-  <div className="max-w-[1200px] mx-auto bg-[#6b0404] rounded-[26px] py-14 px-6 md:px-12">
+<section className="block md:hidden w-full">
 
-    {/* Title */}
-    <div className="text-center mb-12 md:mb-16">
-      <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
-        Our <span className="text-[#ff850b]">Five-Cycle</span> Program
-      </h2>
+<Image
+src="/images/mobile five cycle.svg"
+alt="Five Cycle Program"
+width={420}
+height={700}
+className="w-full h-auto"
+/>
 
-      <p className="text-[#ff850b] text-lg md:text-2xl font-medium">
-        A science-based process that prepares your body
-      </p>
-
-      <p className="text-[#ff850b] text-lg md:text-2xl font-medium">
-        for sustainable weight loss.
-      </p>
-    </div>
-
-
-    {/* Desktop Circular Layout */}
-    <div className="hidden md:block relative w-full h-[520px]">
-
-      {/* Dotted Orbit */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[360px] h-[360px] border-2 border-dashed border-white rounded-full"></div>
-      </div>
-
-      {/* Center Circle */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-[#ff850b] rounded-full flex items-center justify-center shadow-lg z-30">
-        <span className="text-center text-white font-bold text-2xl leading-tight">
-          WEIGHT <br /> LOSS
-        </span>
-      </div>
-
-
-      {/* Top - Detox */}
-      <div className="absolute left-1/2 top-[0px] -translate-x-1/2 w-44 text-center">
-
-        <div className="w-20 h-20 bg-[#ff850b] rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <path d="M20 5V25M15 10H25M12 20C12 25.5 15.6 30 20 30C24.4 30 28 25.5 28 20" stroke="white" strokeWidth="2"/>
-          </svg>
-        </div>
-
-        <h3 className="text-white font-semibold text-sm mb-1">
-          Detoxification
-        </h3>
-
-        <p className="text-[#ff850b] text-xs">
-          This initial phase gently cleanses your body
-        </p>
-
-      </div>
-
-
-      {/* Top Right */}
-      <div className="absolute top-[80px] right-[90px] w-44 text-center">
-
-        <div className="w-20 h-20 bg-[#ff850b] rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <path d="M20 8L24 16H32L26 21L28 29L20 24L12 29L14 21L8 16H16L20 8Z" fill="white"/>
-          </svg>
-        </div>
-
-        <h3 className="text-white font-semibold text-sm mb-1">
-          Anti-Inflammatory Reset
-        </h3>
-
-        <p className="text-[#ff850b] text-xs">
-          Anti-inflammatory foods to reduce inflammation
-        </p>
-
-      </div>
-
-
-      {/* Bottom Right */}
-      <div className="absolute bottom-[50px] right-[120px] w-44 text-center">
-
-        <div className="w-20 h-20 bg-[#ff850b] rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <path d="M20 5C15 8 12 14 12 20C12 28 15.7 35 20 35C24.3 35 28 28 28 20C28 14 25 8 20 5Z" fill="white"/>
-          </svg>
-        </div>
-
-        <h3 className="text-white font-semibold text-sm mb-1">
-          Fat-Burning Activation
-        </h3>
-
-        <p className="text-[#ff850b] text-xs">
-          Cycle focused on maximizing fat burning
-        </p>
-
-      </div>
-
-
-      {/* Bottom Left */}
-      <div className="absolute bottom-[50px] left-[120px] w-44 text-center">
-
-        <div className="w-20 h-20 bg-[#ff850b] rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <path d="M20 8C14.5 8 10 12.5 10 18C10 23.5 14.5 28 20 28C25.5 28 30 23.5 30 18" stroke="white" strokeWidth="2"/>
-          </svg>
-        </div>
-
-        <h3 className="text-white font-semibold text-sm mb-1">
-          Metabolic Optimisation
-        </h3>
-
-        <p className="text-[#ff850b] text-xs">
-          Rev up your metabolism with booster cycle
-        </p>
-
-      </div>
-
-
-      {/* Top Left */}
-      <div className="absolute top-[80px] left-[90px] w-44 text-center">
-
-        <div className="w-20 h-20 bg-[#ff850b] rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <path d="M20 10L25 22H38L28 28L32 40L20 34L8 40L12 28L2 22H15L20 10Z" fill="white"/>
-          </svg>
-        </div>
-
-        <h3 className="text-white font-semibold text-sm mb-1">
-          Maintenance & Progression
-        </h3>
-
-        <p className="text-[#ff850b] text-xs">
-          Celebrate your success and maintain your weight loss
-        </p>
-
-      </div>
-
-    </div>
-
-
-    {/* Mobile Layout */}
-    <div className="md:hidden space-y-4 mt-10">
-
-      {[
-        {
-          title:"Detoxification",
-          text:"This initial phase gently cleanses your body"
-        },
-        {
-          title:"Anti-Inflammatory Reset",
-          text:"Anti-inflammatory foods to reduce inflammation"
-        },
-        {
-          title:"Fat-Burning Activation",
-          text:"Cycle focused on maximizing fat burning"
-        },
-        {
-          title:"Metabolic Optimisation",
-          text:"Rev up your metabolism"
-        },
-        {
-          title:"Maintenance & Progression",
-          text:"Maintain your weight loss success"
-        }
-
-      ].map((item,index)=>(
-        
-        <div key={index} className="bg-[#4E0101] rounded-2xl p-5 border-2 border-[#ff850b]">
-
-          <div className="flex gap-4">
-
-            <div className="w-16 h-16 bg-[#ff850b] rounded-full flex items-center justify-center shadow-md">
-              <span className="text-white font-bold">{index+1}</span>
-            </div>
-
-            <div>
-
-              <h3 className="text-white font-semibold mb-1">
-                {item.title}
-              </h3>
-
-              <p className="text-[#ff850b] text-sm">
-                {item.text}
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      ))}
-
-    </div>
-
-  </div>
 </section>
 
-      {/* Why People Trust DTPS Section */}
-      <section className="bg-white py-12">
-        <div className="max-w-[1200px] mx-auto px-5">
-          <h2 className="text-center text-3xl md:text-5xl font-bold text-black leading-tight mb-6 md:mb-10">
-            Why people trust <span className="text-[#ff850b]">DTPS</span>?
-          </h2>
 
-          <div className="flex flex-col gap-3 md:gap-5 max-w-full md:max-w-[65%] mx-auto">
-            <div className="bg-[#4E0101] rounded-2xl md:rounded-3xl py-3 md:py-4 px-4 md:px-5 flex items-center gap-3 md:gap-5">
-              <Image
-                src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/03/icon-our-journey-1.svg"
-                alt="Icon"
-                width={70}
-                height={70}
-                className="w-12 h-12 md:w-[70px] md:h-[70px]"
-              />
-              <p className="text-white text-sm md:text-xl font-normal leading-relaxed m-0">
-                Personalised plan built around your taste, work hours, travel,
-                and culture
-              </p>
-            </div>
 
-            <div className="bg-[#4E0101] rounded-2xl md:rounded-3xl py-3 md:py-4 px-4 md:px-5 flex items-center gap-3 md:gap-5">
-              <Image
-                src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/03/icon-our-journey-1.svg"
-                alt="Icon"
-                width={70}
-                height={70}
-                className="w-12 h-12 md:w-[70px] md:h-[70px]"
-              />
-              <p className="text-white text-sm md:text-xl font-normal leading-relaxed m-0">
-                Medical aware for PCOS, thyroid, and diabetes with reports
-                considered
-              </p>
-            </div>
+{/* ================= DESKTOP VERSION ================= */}
 
-            <div className="bg-[#4E0101] rounded-2xl md:rounded-3xl py-3 md:py-4 px-4 md:px-5 flex items-center gap-3 md:gap-5">
-              <Image
-                src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/03/icon-our-journey-1.svg"
-                alt="Icon"
-                width={70}
-                height={70}
-                className="w-12 h-12 md:w-[70px] md:h-[70px]"
-              />
-              <p className="text-white text-sm md:text-xl font-normal leading-relaxed m-0">
-                No supplements. No heavy workouts. No starvation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="hidden md:block bg-white py-20 px-4">
 
-      {/* Stats Section */}
-      <section className="bg-white py-8 md:py-12">
-        <div className="max-w-[1120px] mx-auto px-3 md:px-5">
-          <div className="grid grid-cols-2 md:flex gap-2 md:gap-0">
-            <div className="md:flex-[25%] p-1.5">
-              <div className="bg-[#FF850B] rounded-2xl py-6 md:py-10 px-4 md:px-5 text-center">
-                <div className="text-white text-3xl md:text-5xl font-bold">
-                  4.8
-                </div>
-                <div className="text-white text-sm md:text-base">
-                  Google Rating
-                </div>
-              </div>
-            </div>
+<div className="max-w-[1200px] mx-auto bg-[#4E0101] rounded-[28px] py-16 px-8 relative">
 
-            <div className="md:flex-[25%] p-1.5">
-              <div className="bg-[#FF850B] rounded-2xl py-6 md:py-10 px-4 md:px-5 text-center">
-                <div className="text-white text-3xl md:text-5xl font-bold">
-                  98%
-                </div>
-                <div className="text-white text-sm md:text-base">
-                  Success Rate
-                </div>
-              </div>
-            </div>
+{/* Heading */}
+<div className="text-center mb-16">
 
-            <div className="md:flex-[25%] p-1.5">
-              <div className="bg-[#FF850B] rounded-2xl py-6 md:py-10 px-4 md:px-5 text-center">
-                <div className="text-white text-3xl md:text-5xl font-bold">
-                  75K+
-                </div>
-                <div className="text-white text-sm md:text-base">Clients</div>
-              </div>
-            </div>
+<h2 className="text-5xl font-bold text-white mb-4">
+Our <span className="text-[#ff850b]">Five-Cycle</span> Program
+</h2>
 
-            <div className="md:flex-[25%] p-1.5">
-              <div className="bg-[#FF850B] rounded-2xl py-4 px-4 md:px-5 text-center">
-                <div className="text-white text-xs md:text-sm">
-                  Personalised
-                </div>
-                <div className="text-white text-2xl md:text-3xl font-bold my-1.5 md:my-2.5">
-                  GHAR
-                </div>
-                <div className="text-white text-xs md:text-sm">
-                  ka Khana Diet Plan
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<p className="text-[#ff850b] text-2xl">
+A science-based process that prepares your body
+</p>
 
-      {/* We Do Not Push Section */}
-      <section className="bg-white pt-8 md:pt-12 pb-10 md:pb-20">
-        <div className="px-2 md:px-4">
-          <div className="max-w-[1820px] mx-auto rounded-[20px] md:rounded-[50px] overflow-hidden relative bg-[#4E0101] bg-[url('https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/1f715e423077509b682c964bc8c674abca623e88-2.png')] bg-cover bg-center pt-6 px-2.5">
-            <div className="absolute inset-0 bg-[rgba(78,1,1,0.95)]"></div>
+<p className="text-[#ff850b] text-2xl">
+for sustainable weight loss.
+</p>
 
-            {/* Desktop Layout */}
-            <div className="relative z-10 hidden md:flex flex-wrap gap-7 p-2.5 items-center justify-center">
-              <div className="w-[calc(40%-20px)]">
-                <Image
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/Bride-Cross.png"
-                  alt="Bride"
-                  width={500}
-                  height={550}
-                  className="w-[60%] h-auto mx-auto block"
-                />
-              </div>
+</div>
 
-              <div className="w-[calc(50%-20px)]">
-                <h2 className="text-5xl font-bold text-white leading-tight mb-7 py-7">
-                  We Do Not <span className="text-[#ff850b]">Push</span>
-                </h2>
 
-                <div className="flex flex-col gap-5">
-                  <div className="bg-[#FF850B] rounded-2xl py-2 px-2.5 flex items-center gap-5">
-                    <div className="bg-white rounded-xl p-2.5 flex items-center justify-center">
-                      <Image
-                        src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/no_meals.svg"
-                        alt="No meals"
-                        width={45}
-                        height={45}
-                      />
-                    </div>
-                    <p className="text-white text-lg font-semibold leading-relaxed m-0">
-                      Crash diets. Starvation.
-                    </p>
-                  </div>
+{/* Orbit Container */}
+<div className="relative h-[520px] flex items-center justify-center">
 
-                  <div className="bg-[#FF850B] rounded-2xl py-2 px-2.5 flex items-center gap-5">
-                    <div className="bg-white rounded-xl p-2.5 flex items-center justify-center">
-                      <Image
-                        src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/pill-1.svg"
-                        alt="Pills"
-                        width={45}
-                        height={45}
-                      />
-                    </div>
-                    <p className="text-white text-lg font-semibold leading-relaxed m-0">
-                      Glutathione. Fat-burner pills. Detox teas.
-                    </p>
-                  </div>
+{/* Dotted Ring */}
+<div className="absolute w-[420px] h-[420px] border-2 border-dashed border-white rounded-full"></div>
 
-                  <div className="bg-[#FF850B] rounded-2xl py-2 px-2.5 flex items-center gap-5">
-                    <div className="bg-white rounded-xl p-2.5 flex items-center justify-center">
-                      <Image
-                        src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/cardio_load.svg"
-                        alt="Cardio"
-                        width={45}
-                        height={45}
-                      />
-                    </div>
-                    <p className="text-white text-lg font-semibold leading-relaxed m-0">
-                      Heavy gym plans if you do not want them.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Mobile Layout */}
-            <div className="relative z-10 md:hidden flex flex-col p-4">
-              <h2 className="text-2xl font-bold text-white leading-tight mb-5 text-center">
-                We Do Not <span className="text-[#ff850b]">Push</span>
-              </h2>
+{/* Center Circle */}
+<div className="absolute w-[150px] h-[150px] bg-white rounded-full flex items-center justify-center text-white font-bold text-2xl text-center shadow-xl">
+WEIGHT<br/>LOSS
+</div>
 
-              <div className="flex justify-center mb-5">
-                <Image
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/Bride-Cross.png"
-                  alt="Bride"
-                  width={250}
-                  height={300}
-                  className="h-auto"
-                />
-              </div>
 
-              <div className="flex flex-col gap-3">
-                <div className="bg-[#FF850B] rounded-xl py-2 px-3 flex items-center gap-3">
-                  <div className="bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/no_meals.svg"
-                      alt="No meals"
-                      width={30}
-                      height={30}
-                    />
-                  </div>
-                  <p className="text-white text-sm font-semibold m-0">
-                    Crash diets. Starvation.
-                  </p>
-                </div>
 
-                <div className="bg-[#FF850B] rounded-xl py-2 px-3 flex items-center gap-3">
-                  <div className="bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/pill-1.svg"
-                      alt="Pills"
-                      width={30}
-                      height={30}
-                    />
-                  </div>
-                  <p className="text-white text-sm font-semibold m-0">
-                    Glutathione. Fat-burner pills. Detox teas.
-                  </p>
-                </div>
+{/* Detox */}
+<div className="absolute top-[20px] left-1/2 -translate-x-1/2 flex flex-col items-center">
 
-                <div className="bg-[#FF850B] rounded-xl py-2 px-3 flex items-center gap-3">
-                  <div className="bg-white rounded-lg p-2 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/cardio_load.svg"
-                      alt="Cardio"
-                      width={30}
-                      height={30}
-                    />
-                  </div>
-                  <p className="text-white text-sm font-semibold m-0">
-                    Heavy gym plans if you do not want them.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+<div className="bg-[#5c0a0a] border border-[#8a3b3b] rounded-xl px-6 py-3 mb-3 text-center">
+<h3 className="text-white font-semibold text-sm">Detoxification</h3>
+<p className="text-[#ff850b] text-xs">
+This initial phase gently cleanses your body
+</p>
+</div>
+
+<div className="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center border-4 border-white">
+<img src="/images/detox.png" className="w-7"/>
+</div>
+
+</div>
+
+
+
+{/* Anti Inflammatory */}
+<div className="absolute right-[120px] top-[150px] flex items-center gap-4">
+
+<div className="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center border-4 border-white">
+<img src="/images/inflam.png" className="w-7"/>
+</div>
+
+<div className="bg-[#5c0a0a] border border-[#8a3b3b] rounded-xl px-6 py-3 w-[220px]">
+<h3 className="text-white font-semibold text-sm">Anti-Inflammatory Reset</h3>
+<p className="text-[#ff850b] text-xs">
+Anti-inflammatory foods to reduce inflammation
+</p>
+</div>
+
+</div>
+
+
+
+{/* Fat Burning */}
+<div className="absolute right-[120px] bottom-[140px] flex items-center gap-4">
+
+<div className="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center border-4 border-white">
+<img src="/images/fat burning.png" className="w-7"/>
+</div>
+
+<div className="bg-[#5c0a0a] border border-[#8a3b3b] rounded-xl px-6 py-3 w-[220px]">
+<h3 className="text-white font-semibold text-sm">Fat-Burning Activation</h3>
+<p className="text-[#ff850b] text-xs">
+Dynamic cycle focused on maximizing fat burning
+</p>
+</div>
+
+</div>
+
+
+
+{/* Metabolic */}
+<div className="absolute left-[120px] bottom-[140px] flex items-center gap-4 flex-row-reverse">
+
+<div className="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center border-4 border-white">
+<img src="/images/metabolic.png" className="w-7"/>
+</div>
+
+<div className="bg-[#5c0a0a] border border-[#8a3b3b] rounded-xl px-6 py-3 w-[220px] text-right">
+<h3 className="text-white font-semibold text-sm">Metabolic Optimisation</h3>
+<p className="text-[#ff850b] text-xs">
+Rev up your metabolism with booster cycle
+</p>
+</div>
+
+</div>
+
+
+
+{/* Maintenance */}
+<div className="absolute left-[120px] top-[150px] flex items-center gap-4 flex-row-reverse">
+
+<div className="w-[70px] h-[70px] bg-white  rounded-full flex items-center justify-center border-4 border-white">
+<img src="/images/maintain.png" className="w-7"/>
+</div>
+
+<div className="bg-[#5c0a0a] border border-[#8a3b3b] rounded-xl px-6 py-3 w-[220px] text-right">
+
+<h3 className="text-white font-semibold text-sm">
+Maintenance & Progression
+</h3>
+
+<p className="text-[#ff850b] text-xs">
+Celebrate success and maintain weight loss
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+ 
+
+{/* We Do Not Push Section */}
+<section className="bg-white py-16 px-4">
+
+<div className="max-w-[1400px] mx-auto bg-[#E7E7E7] rounded-[30px] p-6 md:p-12">
+
+<div className="grid md:grid-cols-2 gap-10 items-center">
+
+{/* LEFT IMAGE */}
+<div className="flex justify-center">
+
+<div className="relative rounded-[22px] overflow-hidden">
+
+{/* ORANGE STRIP */}
+<div className="absolute left-0 top-0 bottom-0 w-[90px] bg-[#FF850B] z-0"></div>
+
+<Image
+src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/Bride-Cross.png"
+alt="Bride"
+width={420}
+height={520}
+className="relative z-10 w-[280px] md:w-[420px]"
+/>
+
+</div>
+
+</div>
+
+
+{/* RIGHT SIDE */}
+<div>
+
+<h2 className="text-3xl md:text-5xl font-bold text-[#333] mb-8">
+We Do Not Push
+</h2>
+
+<div className="flex flex-col gap-6">
+
+{/* CARD 1 */}
+<div className="flex items-center gap-5 bg-[#FF850B] md:bg-[#FF850B] rounded-2xl p-4 md:p-5">
+
+<div className="bg-[#E7E7E7] rounded-xl p-3 flex items-center justify-center">
+
+<Image
+src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/no_meals.svg"
+alt="No meals"
+width={40}
+height={40}
+/>
+
+</div>
+
+<p className="text-white font-semibold text-base md:text-lg">
+Crash diets. Starvation.
+</p>
+
+</div>
+
+
+{/* CARD 2 */}
+<div className="flex items-center gap-5 bg-[#FF850B] rounded-2xl p-4 md:p-5">
+
+<div className="bg-[#E7E7E7] rounded-xl p-3 flex items-center justify-center">
+
+<Image
+src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/pill-1.svg"
+alt="Pills"
+width={40}
+height={40}
+/>
+
+</div>
+
+<p className="text-white font-semibold text-base md:text-lg">
+Glutathione. Fat-burner pills. Detox teas.
+</p>
+
+</div>
+
+
+{/* CARD 3 */}
+<div className="flex items-center gap-5 bg-[#FF850B] rounded-2xl p-4 md:p-5">
+
+<div className="bg-[#E7E7E7] rounded-xl p-3 flex items-center justify-center">
+
+<Image
+src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/cardio_load.svg"
+alt="Cardio"
+width={40}
+height={40}
+/>
+
+</div>
+
+<p className="text-white font-semibold text-base md:text-lg">
+Heavy gym plans if you do not want them.
+</p>
+
+</div>
+
+
+{/* CARD 4 */}
+<div className="flex items-center gap-5 bg-[#FF850B] rounded-2xl p-4 md:p-5">
+
+<div className="bg-[#E7E7E7] rounded-xl p-3 flex items-center justify-center">
+
+<Image
+src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/salad.svg"
+alt="Salad"
+width={40}
+height={40}
+/>
+
+</div>
+
+<p className="text-white font-semibold text-base md:text-lg">
+Fad expensive salad or juice-only diet.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
       {/* Pricing Section */}
       <section className="bg-white py-12 md:py-16 px-5">
