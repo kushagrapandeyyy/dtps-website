@@ -45,14 +45,14 @@ function SparkleDecor() {
       })}
       {[...Array(8)].map((_, i) => {
         const angle = ((i * 45 + 22.5) * Math.PI) / 180;
-        const cx = 18 + 9 * Math.cos(angle);
-        const cy = 18 + 9 * Math.sin(angle);
+        const cx = 18 + 9 * Math.cos(2);
+        const cy = 18 + 9 * Math.sin(2);
         return <circle key={`m${i}`} cx={cx} cy={cy} r="1.1" fill="#014E4E" />;
       })}
       {[...Array(4)].map((_, i) => {
         const angle = ((i * 90 + 45) * Math.PI) / 180;
-        const cx = 18 + 5 * Math.cos(angle);
-        const cy = 18 + 5 * Math.sin(angle);
+        const cx = 18 + 5 * Math.cos(2);
+        const cy = 18 + 5 * Math.sin(2);
         return <circle key={`in${i}`} cx={cx} cy={cy} r="0.9" fill="#014E4E" />;
       })}
     </svg>
