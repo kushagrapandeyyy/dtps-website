@@ -3098,9 +3098,26 @@
   border-radius: 30px;
   overflow: hidden;
   position: relative;
-  background-image: url('https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/Div.png');
-  background-size: cover;
-  background-position: center top;
+}
+
+.wedding-hero-image {
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.wedding-navbar-layer {
+  position: relative;
+  z-index: 10;
+}
+
+.wedding-hero-bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  background: linear-gradient(to top, #4E0101 35%, transparent);
+  z-index: 1;
 }
 
 .wedding-hero-content {
@@ -3162,12 +3179,16 @@
 
   .wedding-hero-section {
     border-radius: 0;
-    min-height: 450px;
+    min-height: 500px;
+  }
+
+  .wedding-hero-image {
+    object-position: center 15%;
   }
 
   .wedding-hero-content {
     padding: 30px 20px 40px;
-    min-height: 400px;
+    min-height: 450px;
   }
 
   .wedding-hero-title {
@@ -3176,6 +3197,11 @@
 
   .wedding-hero-subtitle {
     font-size: 16px;
+  }
+
+  .wedding-hero-bottom-overlay {
+    height: 280px;
+    background: linear-gradient(to top, #4E0101 40%, transparent);
   }
 }
 

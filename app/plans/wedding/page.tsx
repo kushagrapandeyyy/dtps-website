@@ -9,8 +9,9 @@ import DynamicPlansDisplay from "@/components/DynamicPlansDisplay";
 import { getPricingByCategory } from "@/lib/api";
 import type { Pricing } from "@/lib/api";
 import TransformationGallery from "@/components/TransformationGallery";
+import ExpertGuidanceSection from "@/components/ExpertGuidanceSection";
 const epilogue = Epilogue({
-  subsets: ["latin"],
+  
   weight: ["400", "500", "600", "700", "800"],
 });
 
@@ -205,9 +206,7 @@ export default function WeddingPlanPage() {
             className="wedding-hero-image"
           />
 
-          <div className="wedding-hero-top-overlay" />
           <div className="wedding-hero-bottom-overlay" />
-          <div className="wedding-hero-vignette" />
 
           <div className="wedding-navbar-layer">
             <Navbar />
@@ -640,9 +639,10 @@ Celebrate success and maintain weight loss
 
 
 {/* We Do Not Push Section */}
-<section className="bg-white py-20 px-4 md:px-20">
+<section className="bg-white py-14 md:py-20">
 
-<div className="max-w-[1700px] mx-auto bg-[#E7E7E7] rounded-[30px] p-6 md:p-12">
+<div className="max-w-[1200px] mx-auto px-5">
+<div className="bg-[#E7E7E7] rounded-[30px] p-6 md:p-12">
 
 <div className="grid md:grid-cols-2 gap-10 items-center">
 
@@ -766,8 +766,252 @@ Fad expensive salad or juice-only diet.
 </div>
 
 </div>
+</div>
 
 </section>
+
+{/* 100% Personalised Ghar Ka Khana Section */}
+<section className="bg-white py-14 md:py-20">
+  <div className="max-w-[1200px] mx-auto px-5">
+    <div className="bg-[#4E0101] rounded-[24px] md:rounded-[30px] px-6 py-10 md:px-16 md:py-14">
+
+      {/* Heading */}
+      <h2 className="text-center text-[22px] md:text-[42px] font-extrabold text-white leading-tight mb-8 md:mb-14">
+        100% Personalised<br />
+        <span className="text-[#FF850B]">GHAR KA KHANA</span> Diet Plan
+      </h2>
+
+      {/* Desktop: 3 Icons Row */}
+      <div className="hidden md:flex items-start justify-center gap-16 mb-14">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Image src="/images/Fully Customised.png" alt="Fully Customised Diet Plan" width={50} height={50} />
+          </div>
+          <p className="text-white text-base font-medium text-center leading-snug">
+            Fully Customised<br />Diet Plan
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Image src="/images/Shaadi.png" alt="Shaadi-Ready Custom Diet Plan" width={50} height={50} />
+          </div>
+          <p className="text-white text-base font-medium text-center leading-snug">
+            Shaadi-Ready<br />Custom Diet Plan
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-[90px] h-[90px] bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Image src="/images/Medical.png" alt="Medical-Aware Personalised Plan" width={50} height={50} />
+          </div>
+          <p className="text-white text-base font-medium text-center leading-snug">
+            Medical-Aware<br />Personalised Plan
+          </p>
+        </div>
+      </div>
+
+      {/* Mobile: Icons with label on right */}
+      <div className="flex md:hidden flex-col gap-5 mb-8 max-w-[260px] mx-auto">
+        <div className="flex items-center gap-4">
+          <div className="w-[56px] h-[56px] min-w-[56px] bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Image src="/images/Fully Customised.png" alt="Fully Customised Diet Plan" width={32} height={32} />
+          </div>
+          <p className="text-white text-sm font-medium leading-snug">
+            Fully Customised<br />Diet Plan
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <div className="w-[56px] h-[56px] min-w-[56px] bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Image src="/images/Shaadi.png" alt="Shaadi-Ready Custom Diet Plan" width={32} height={32} />
+          </div>
+          <p className="text-white text-sm font-medium leading-snug">
+            Shaadi-Ready<br />Custom Diet Plan
+          </p>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <div className="w-[56px] h-[56px] min-w-[56px] bg-white rounded-full flex items-center justify-center shadow-lg">
+            <Image src="/images/Medical.png" alt="Medical-Aware Personalised Plan" width={32} height={32} />
+          </div>
+          <p className="text-white text-sm font-medium leading-snug">
+            Medical-Aware<br />Personalised Plan
+          </p>
+        </div>
+      </div>
+
+      {/* To lose weight box - Desktop */}
+      <div className="hidden md:block border border-[rgba(255,255,255,0.25)] rounded-2xl px-10 py-8 mb-10 max-w-[700px] mx-auto">
+        <h3 className="text-white text-2xl font-bold text-center mb-5">
+          To lose weight, you don&apos;t need
+        </h3>
+        <div className="flex items-center justify-center gap-10">
+          <div className="flex items-center gap-2.5">
+            <span className="w-7 h-7 bg-[#E53935] rounded-lg flex items-center justify-center text-white text-sm font-bold">✕</span>
+            <span className="text-white text-base font-semibold">Heavy Exercise</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <span className="w-7 h-7 bg-[#E53935] rounded-lg flex items-center justify-center text-white text-sm font-bold">✕</span>
+            <span className="text-white text-base font-semibold">Expensive Supplements</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <span className="w-7 h-7 bg-[#E53935] rounded-lg flex items-center justify-center text-white text-sm font-bold">✕</span>
+            <span className="text-white text-base font-semibold">Starvation</span>
+          </div>
+        </div>
+      </div>
+
+      {/* To lose weight box - Mobile */}
+      <div className="md:hidden border border-[rgba(255,255,255,0.25)] rounded-2xl px-5 py-6 mb-8 max-w-[280px] mx-auto">
+        <h3 className="text-white text-lg font-bold text-center mb-4 leading-snug">
+          To lose weight,<br />you don&apos;t need
+        </h3>
+        <div className="flex flex-col gap-3 pl-2">
+          <div className="flex items-center gap-3">
+            <span className="w-6 h-6 min-w-[24px] bg-[#E53935] rounded-md flex items-center justify-center text-white text-xs font-bold">✕</span>
+            <span className="text-white text-sm font-medium">Heavy Exercise</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="w-6 h-6 min-w-[24px] bg-[#E53935] rounded-md flex items-center justify-center text-white text-xs font-bold">✕</span>
+            <span className="text-white text-sm font-medium">Expensive Supplements</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="w-6 h-6 min-w-[24px] bg-[#E53935] rounded-md flex items-center justify-center text-white text-xs font-bold">✕</span>
+            <span className="text-white text-sm font-medium">Starvation</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom tagline */}
+      <p className="text-center text-sm md:text-lg font-semibold text-white leading-relaxed">
+        Sirf <span className="text-[#FF850B] italic">GHAR KE KHANE</span><br className="md:hidden" />
+        {" "}se bhi ho sakta hai amazing<br className="md:hidden" />
+        {" "}<span className="text-[#FF850B] font-bold">WEIGHT LOSS</span>!
+      </p>
+
+    </div>
+  </div>
+</section>
+
+{/* Why People Trust DTPS Section */}
+<section className="bg-white py-14 md:py-20">
+  <div className="max-w-[1200px] mx-auto px-5">
+
+    {/* Heading */}
+    <h2 className="text-center text-2xl md:text-[42px] font-bold text-black leading-tight mb-8 md:mb-12">
+      Why people trust <span className="text-[#FF850B]">DTPS</span>?
+    </h2>
+
+    {/* Desktop: Horizontal cards */}
+    <div className="hidden md:flex flex-col gap-5 max-w-[850px] mx-auto">
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-6 px-8 py-6">
+        <div className="w-[80px] h-[80px] min-w-[80px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/personalized 1.png" alt="Personalised" width={48} height={48} />
+        </div>
+        <p className="text-white text-base md:text-lg font-medium leading-snug">
+          Personalised plan built around<br />your taste, work hours, travel, and culture
+        </p>
+      </div>
+
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-6 px-8 py-6">
+        <div className="w-[80px] h-[80px] min-w-[80px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/medical-report (1) 1.png" alt="Medical" width={48} height={48} />
+        </div>
+        <p className="text-white text-base md:text-lg font-medium leading-snug">
+          Medical aware for PCOS, thyroid,<br />and diabetes with reports considered
+        </p>
+      </div>
+
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-6 px-8 py-6">
+        <div className="w-[80px] h-[80px] min-w-[80px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/_x31_1_Sport_Nutrition.png" alt="No supplements" width={48} height={48} />
+        </div>
+        <p className="text-white text-base md:text-lg font-medium leading-snug">
+          We don&apos;t recommend eating expensive<br />fat-burning supplements
+        </p>
+      </div>
+
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-6 px-8 py-6">
+        <div className="w-[80px] h-[80px] min-w-[80px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/Group (1).png" alt="No heavy workouts" width={48} height={48} />
+        </div>
+        <p className="text-white text-base md:text-lg font-medium leading-snug">
+          We don&apos;t promote any<br />heavy workouts or starvation
+        </p>
+      </div>
+    </div>
+
+    {/* Mobile: Stacked cards */}
+    <div className="md:hidden flex flex-col gap-4">
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-4 px-5 py-5">
+        <div className="w-[60px] h-[60px] min-w-[60px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/personalized 1.png" alt="Personalised" width={36} height={36} />
+        </div>
+        <p className="text-white text-sm font-medium leading-snug">
+          Personalised plan built around your taste, work hours, travel, and culture
+        </p>
+      </div>
+
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-4 px-5 py-5">
+        <div className="w-[60px] h-[60px] min-w-[60px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/medical-report (1) 1.png" alt="Medical" width={36} height={36} />
+        </div>
+        <p className="text-white text-sm font-medium leading-snug">
+          Medical aware for PCOS, thyroid, and diabetes with reports considered
+        </p>
+      </div>
+
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-4 px-5 py-5">
+        <div className="w-[60px] h-[60px] min-w-[60px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/_x31_1_Sport_Nutrition.png" alt="No supplements" width={36} height={36} />
+        </div>
+        <p className="text-white text-sm font-medium leading-snug">
+          We don&apos;t recommend eating expensive fat-burning supplements
+        </p>
+      </div>
+
+      <div className="bg-[#4E0101] rounded-2xl flex items-center gap-4 px-5 py-5">
+        <div className="w-[60px] h-[60px] min-w-[60px] bg-[#FF850B] rounded-xl flex items-center justify-center">
+          <Image src="/images/Group (1).png" alt="No heavy workouts" width={36} height={36} />
+        </div>
+        <p className="text-white text-sm font-medium leading-snug">
+          We don&apos;t promote any heavy workouts or starvation
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      {/* Expert's Guidance Section */}
+      <section className="bg-white px-4 md:px-5">
+        <ExpertGuidanceSection variant="maroon" />
+      </section>
+
+      {/* Over 75,000+ People Enjoy Weight Loss */}
+      <section className="py-12 md:py-20 px-4 md:px-12 lg:px-[120px]">
+        <div className="max-w-[1000px] mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-14">
+            <div className="max-w-[630px]">
+              <span className="text-[#FF850B] text-sm md:text-base font-semibold">Our Testimonials</span>
+              <h2 className="text-2xl md:text-[42px] font-bold text-[#1E1E1E] leading-tight mt-2">
+                Over 75,000+<br />
+                People Enjoy Weight Loss
+              </h2>
+              <p className="text-[#828283] text-xs md:text-sm mt-2">
+                Join our Plan today and embark on a journey to better health with our weight loss plan!
+              </p>
+            </div>
+          </div>
+          <TransformationGallery
+            page="wedding"
+            title=""
+            subtitle=""
+            maxItems={6}
+          />
+        </div>
+      </section>
 
       {/* Pricing Section */}
       <section className="bg-white py-12 md:py-16 px-5">
@@ -808,183 +1052,6 @@ Fad expensive salad or juice-only diet.
                   window.location.href = "/checkout";
                 }}
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Award-Winning Recognition Section */}
-      <section className="bg-white pt-12 md:pt-24 pb-16 px-2.5">
-        <div className="max-w-[1200px] mx-auto px-5 text-center">
-          <h2 className="text-2xl md:text-5xl font-bold text-black leading-tight mx-auto mb-4 md:mb-5 max-w-full md:max-w-[77%]">
-            <span className="text-[#ff850b]">Award-Winning</span> Health &
-            Wellness
-          </h2>
-
-          <p className="text-sm md:text-base font-light leading-relaxed text-[#828283] max-w-full md:max-w-[65%] mx-auto mb-6 md:mb-10">
-            Proud to be recognized for excellence in health, innovation, and
-            results—our weight loss plan has earned top industry awards for
-            effectiveness and success.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-            {awards.map((award, index) => (
-              <div
-                key={index}
-                className="bg-[#4C0202] rounded-xl shadow-[0_4px_4px_rgba(0,0,0,0.5)] p-4 text-left"
-              >
-                <Image
-                  src={award.image}
-                  alt={award.title}
-                  width={400}
-                  height={250}
-                  className="w-full h-auto rounded-[10px] mb-4"
-                />
-                <h3 className="text-xl font-semibold text-white leading-tight mb-2.5">
-                  {award.title}
-                </h3>
-                <button className="bg-[#4C0202] text-white border-none py-2 px-0 text-[15px] font-medium cursor-pointer flex items-center gap-2">
-                  Read More →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Expert's Guidance Section */}
-      <section className="bg-white pt-8 md:pt-12">
-        <div className="px-2 md:px-4">
-          <div className="max-w-[1820px] mx-auto rounded-[20px] md:rounded-[50px] overflow-hidden relative bg-[#4E0101] bg-[url('https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/1f715e423077509b682c964bc8c674abca623e88-2.png')] bg-cover bg-center pt-10 md:pt-16 px-2.5">
-            <div className="absolute inset-0 bg-[rgba(78,1,1,0.96)]"></div>
-
-            {/* Desktop Layout */}
-            <div className="relative z-10 hidden md:block">
-              <h2 className="text-center text-[45px] font-bold text-white leading-tight mb-12">
-                You are Under{" "}
-                <span className="text-[#ff850b]">Expert&apos;s Guidance</span>
-              </h2>
-
-              <div className="flex flex-wrap gap-7 p-2.5 items-center justify-center">
-                <div className="w-[calc(40%-20px)]">
-                  <Image
-                    src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Untitled-design-32-1.png"
-                    alt="Dt. Poonam Sagar"
-                    width={500}
-                    height={550}
-                    className="w-[60%] h-auto mx-auto block"
-                  />
-                </div>
-
-                <div className="w-[calc(50%-20px)]">
-                  <p className="text-white text-base font-light leading-relaxed mb-5">
-                    Dt. Poonam Sagar understands that one-size-fits-all plans
-                    simply don&apos;t suffice. That&apos;s why we specialize in
-                    crafting personalized dietary solutions tailored to your
-                    unique needs and preferences. Dt. Sagar&apos;s philosophy
-                    revolves around creating sustainable meal plans centered on
-                    delicious, home-cooked dishes.
-                  </p>
-
-                  <ul className="list-none py-5 px-4 m-0 grid gap-2.5">
-                    {[
-                      {
-                        icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28.svg",
-                        text: "Holistic Health Approach",
-                      },
-                      {
-                        icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-1.svg",
-                        text: "Nutritional Counsellors",
-                      },
-                      {
-                        icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-2.svg",
-                        text: "Compassionate Care",
-                      },
-                      {
-                        icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-3.svg",
-                        text: "Tailored meal plan",
-                      },
-                      {
-                        icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-4.svg",
-                        text: "Weight Management",
-                      },
-                      {
-                        icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-5.svg",
-                        text: "Better Health",
-                      },
-                    ].map((item, index) => (
-                      <li
-                        key={index}
-                        className="flex items-center gap-1.5 text-white text-base font-normal leading-normal"
-                      >
-                        <Image src={item.icon} alt="" width={28} height={28} />
-                        {item.text}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile Layout */}
-            <div className="relative z-10 md:hidden px-4 py-6">
-              <h2 className="text-center text-2xl font-bold text-white leading-tight mb-6">
-                You are Under{" "}
-                <span className="text-[#ff850b]">Expert&apos;s Guidance</span>
-              </h2>
-
-              <div className="flex justify-center mb-5">
-                <Image
-                  src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Untitled-design-32-1.png"
-                  alt="Dt. Poonam Sagar"
-                  width={250}
-                  height={300}
-                  className="h-auto"
-                />
-              </div>
-
-              <p className="text-white text-sm font-light leading-relaxed mb-4 text-center">
-                Dt. Poonam Sagar understands that one-size-fits-all plans
-                simply don&apos;t suffice. We specialize in crafting
-                personalized dietary solutions tailored to your unique needs.
-              </p>
-
-              <ul className="list-none p-0 m-0 grid grid-cols-2 gap-2">
-                {[
-                  {
-                    icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28.svg",
-                    text: "Holistic Health",
-                  },
-                  {
-                    icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-1.svg",
-                    text: "Nutritional Care",
-                  },
-                  {
-                    icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-2.svg",
-                    text: "Compassionate",
-                  },
-                  {
-                    icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-3.svg",
-                    text: "Tailored Plan",
-                  },
-                  {
-                    icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-4.svg",
-                    text: "Weight Mgmt",
-                  },
-                  {
-                    icon: "https://staging.dtpoonamsagar.com/wp-content/uploads/2025/10/Frame-28-5.svg",
-                    text: "Better Health",
-                  },
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center gap-1.5 text-white text-xs font-normal"
-                  >
-                    <Image src={item.icon} alt="" width={20} height={20} />
-                    {item.text}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -1039,53 +1106,20 @@ Fad expensive salad or juice-only diet.
           transform: scale(1.01);
         }
 
-        .wedding-hero-top-overlay {
-          position: absolute;
-          inset: 0;
-          z-index: 2;
-          background: linear-gradient(
-            to bottom,
-            rgba(18, 0, 0, 0.55) 0%,
-            rgba(30, 0, 0, 0.18) 18%,
-            rgba(55, 0, 0, 0.08) 38%,
-            rgba(80, 0, 0, 0) 52%
-          );
-          pointer-events: none;
-        }
-
         .wedding-hero-bottom-overlay {
           position: absolute;
-          inset: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 50%;
           z-index: 2;
           background: linear-gradient(
             to top,
-            rgba(104, 0, 0, 0.98) 0%,
-            rgba(120, 0, 0, 0.92) 12%,
-            rgba(125, 0, 0, 0.75) 24%,
-            rgba(118, 0, 0, 0.38) 39%,
-            rgba(118, 0, 0, 0.12) 52%,
-            rgba(118, 0, 0, 0) 64%
+            rgba(78, 1, 1, 1) 0%,
+            rgba(78, 1, 1, 0.85) 25%,
+            rgba(78, 1, 1, 0.5) 50%,
+            rgba(78, 1, 1, 0) 100%
           );
-          pointer-events: none;
-        }
-
-        .wedding-hero-vignette {
-          position: absolute;
-          inset: 0;
-          z-index: 2;
-          background: radial-gradient(
-              circle at center,
-              rgba(255, 255, 255, 0) 40%,
-              rgba(46, 0, 0, 0.1) 74%,
-              rgba(20, 0, 0, 0.3) 100%
-            ),
-            linear-gradient(
-              to right,
-              rgba(30, 0, 0, 0.18) 0%,
-              rgba(30, 0, 0, 0) 18%,
-              rgba(30, 0, 0, 0) 82%,
-              rgba(30, 0, 0, 0.18) 100%
-            );
           pointer-events: none;
         }
 

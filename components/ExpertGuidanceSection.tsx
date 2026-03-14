@@ -200,7 +200,11 @@ function CounterBox({
   );
 }
 
-export default function ExpertGuidanceSection() {
+export default function ExpertGuidanceSection({ variant = 'teal' }: { variant?: 'teal' | 'maroon' }) {
+  const colors = variant === 'maroon'
+    ? { bg: '#4E0101', bgDark: '#4E0101', accent: '#3AB1A0', gradient: '#4E0101' }
+    : { bg: '#005A5A', bgDark: '#014E4E', accent: '#3AB1A0', gradient: '#014E4E' };
+
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [counters, setCounters] = useState<CounterState>({
@@ -248,7 +252,8 @@ export default function ExpertGuidanceSection() {
   return (
     <section
       ref={sectionRef}
-      className={`relative w-full max-w-[1200px] mx-auto my-8 md:my-12 lg:my-16 overflow-hidden rounded-[24px] bg-[#005A5A] ${epilogue.className}`}
+      className={`relative w-full max-w-[1200px] mx-auto my-8 md:my-12 lg:my-16 overflow-hidden rounded-[24px] ${epilogue.className}`}
+      style={{ backgroundColor: colors.bg }}
     >
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
         <div className="absolute left-[-10px] top-[10px] h-[74px] w-[34px] rounded-full border border-white/30" />
@@ -314,7 +319,7 @@ export default function ExpertGuidanceSection() {
                   fill
                   className="object-contain object-bottom"
                 />
-                <div className="absolute inset-x-0 bottom-[-2px] h-[84px] bg-gradient-to-t from-[#005A5A] via-[#005A5A]/70 to-transparent" />
+                <div className="absolute inset-x-0 bottom-[-2px] h-[84px]" style={{ background: `linear-gradient(to top, ${colors.bg}, ${colors.bg}B3, transparent)` }} />
               </div>
             </div>
           </div>
@@ -437,7 +442,7 @@ export default function ExpertGuidanceSection() {
           <div
             className="relative overflow-hidden"
             style={{
-              background: "linear-gradient(90deg, #014E4E 0%, white 30%, white 70%, #014E4E 100%)",
+              background: `linear-gradient(90deg, ${colors.gradient} 0%, white 30%, white 70%, ${colors.gradient} 100%)`,
             }}
           >
             <div className="logo-track flex w-max items-center gap-[24px]">
