@@ -535,7 +535,7 @@ for sustainable weight loss.
 
 
 {/* Center Circle */}
-<div className="absolute w-[150px] h-[150px] bg-white rounded-full flex items-center justify-center text-white font-bold text-2xl text-center shadow-xl">
+<div className="absolute w-[150px] h-[150px] bg-white rounded-full flex items-center justify-center text-[#FF850B] font-bold text-2xl text-center shadow-xl">
 WEIGHT<br/>LOSS
 </div>
 
@@ -616,7 +616,7 @@ Rev up your metabolism with booster cycle
 {/* Maintenance */}
 <div className="absolute left-[120px] top-[150px] flex items-center gap-4 flex-row-reverse">
 
-<div className="w-[70px] h-[70px] bg-white  rounded-full flex items-center justify-center border-4 border-white">
+<div className="w-[70px] h-[70px] bg-white rounded-full flex items-center justify-center border-4 border-white">
 <img src="/images/maintain.png" className="w-7"/>
 </div>
 
@@ -637,17 +637,17 @@ Celebrate success and maintain weight loss
 </div>
 </div>
 </section>
- 
+
 
 {/* We Do Not Push Section */}
-<section className="bg-white py-16 px-4">
+<section className="bg-white py-20 px-4 md:px-20">
 
-<div className="max-w-[1400px] mx-auto bg-[#E7E7E7] rounded-[30px] p-6 md:p-12">
+<div className="max-w-[1700px] mx-auto bg-[#E7E7E7] rounded-[30px] p-6 md:p-12">
 
 <div className="grid md:grid-cols-2 gap-10 items-center">
 
 {/* LEFT IMAGE */}
-<div className="flex justify-center">
+<div className="flex justify-center md:justify-start">
 
 <div className="relative rounded-[22px] overflow-hidden">
 
@@ -677,7 +677,7 @@ We Do Not Push
 <div className="flex flex-col gap-6">
 
 {/* CARD 1 */}
-<div className="flex items-center gap-5 bg-[#FF850B] md:bg-[#FF850B] rounded-2xl p-4 md:p-5">
+<div className="flex items-center gap-5 bg-[#FF850B] rounded-2xl p-4 md:p-5">
 
 <div className="bg-[#E7E7E7] rounded-xl p-3 flex items-center justify-center">
 
@@ -745,8 +745,8 @@ Heavy gym plans if you do not want them.
 <div className="bg-[#E7E7E7] rounded-xl p-3 flex items-center justify-center">
 
 <Image
-src="https://staging.dtpoonamsagar.com/wp-content/uploads/2025/11/salad.svg"
-alt="Salad"
+src="/images/fad.png"
+alt="Fad Diet"
 width={40}
 height={40}
 />
