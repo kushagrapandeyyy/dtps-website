@@ -11,7 +11,7 @@ const path = require('path');
 
 // Read .env.local manually
 const envPath = path.join(__dirname, '../.env.local');
-let MONGODB_URI = 'mongodb://localhost:27017/DTPS-Ecommerce';
+let MONGODB_URI = '';
 
 if (fs.existsSync(envPath)) {
   const envContent = fs.readFileSync(envPath, 'utf8');
@@ -26,11 +26,17 @@ console.log('=====================================\n');
 
 console.log('📋 Environment Check:');
 console.log(`   MONGODB_URI: ${MONGODB_URI ? '✅ Set' : '❌ Not set'}`);
-console.log(`   Connection String: ${MONGODB_URI?.substring(0, 50)}...`);
+if (MONGODB_URI) {
+  console.log(`   Connection String: ${MONGODB_URI.substring(0, 50)}...`);
+}
 console.log();
 
 async function testConnection() {
   try {
+    if (!MONGODB_URI) {
+      throw new Error('MONGODB_URI is not configured in .env.local');
+    }
+
     console.log('⏳ Attempting to connect to MongoDB...');
     console.log('   Timeout: 10 seconds');
     console.log();
@@ -90,6 +96,14 @@ async function testConnection() {
       console.log('1. Check internet connection');
       console.log('2. Verify MongoDB Atlas cluster URL is correct');
       console.log('3. Check DNS settings');
+      console.log();
+    } else if (error.message.includes('not configured')) {
+      console.log('🔧 Diagnosis: MongoDB connection string is missing');
+      console.log();
+      console.log('Solution:');
+      console.log('1. Create .env.local in the project root');
+      console.log('2. Add MONGODB_URI=mongodb+srv://... or your local Mongo URI');
+      console.log('3. Restart the Next.js dev server');
       console.log();
     }
 

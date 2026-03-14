@@ -1,10 +1,6 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/DTPS-Ecommerce';
-
-if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable');
-}
+const MONGODB_URI = process.env.MONGODB_URI?.trim();
 
 interface CachedConnection {
   conn: typeof mongoose | null;
@@ -22,6 +18,10 @@ if (!global.mongoose) {
 }
 
 async function dbConnect(): Promise<typeof mongoose> {
+  if (!MONGODB_URI) {
+    throw new Error('MONGODB_URI is not configured. Next.js reads .env.local (not .env.local.example). Add MONGODB_URI to .env.local and restart the dev server.');
+  }
+
   if (cached.conn) {
     return cached.conn;
   }
@@ -29,19 +29,26 @@ async function dbConnect(): Promise<typeof mongoose> {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
-      dbName: 'DTPS-Ecommerce',
-      connectTimeoutMS: 5000,
-      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 10000,
+      maxPoolSize: 10,
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts)
-      .then((mongoose) => {
-        console.log('✅ MongoDB connected to DTPS-Ecommerce');
-        return mongoose;
+      .then(async (mongooseInstance) => {
+        const database = mongooseInstance.connection.db;
+
+        if (!database) {
+          throw new Error('MongoDB connection opened without selecting a database. Check MONGODB_URI.');
+        }
+
+        await database.admin().ping();
+        console.log(`MongoDB connected: ${mongooseInstance.connection.host}/${mongooseInstance.connection.name}`);
+        return mongooseInstance;
       })
       .catch((error) => {
-        console.error('❌ MongoDB connection failed:', error.message);
-        // Don't cache the failed promise, allow retry on next request
+        console.error('MongoDB connection failed:', error.message);
         cached.promise = null;
         throw new Error(`MongoDB connection failed: ${error.message}`);
       });
