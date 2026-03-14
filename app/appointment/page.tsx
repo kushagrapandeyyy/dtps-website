@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
-import Button from '@/components/ui/Button';
+import AppointmentBookingForm from '@/components/AppointmentBookingForm';
 import PageWrapper from '@/components/PageWrapper';
 
 export const metadata: Metadata = {
@@ -28,75 +27,7 @@ export default function AppointmentPage() {
       {/* Appointment Form Section */}
       <section className="about-section">
         <div className="container">
-          <div className="appointment-card">
-            <div className="appointment-content-grid">
-              {/* Left Side - Info & Image */}
-              <div className="appointment-left">
-                <div className="section-label">
-                  <span className="star">✦</span> Appointment
-                </div>
-                <h2 className="section-title">Make appointment</h2>
-                <p className="about-desc">
-                  Easy scheduling for a personalized health coaching session. Take 
-                  the first step towards better health today!
-                </p>
-                <div className="appointment-image">
-                  <Image 
-                    src="https://placehold.co/400x300/0d4043/ffffff?text=Health+Coaching" 
-                    alt="Health Coaching" 
-                    width={400} 
-                    height={300} 
-                    className="rounded-2xl object-cover"
-                  />
-                </div>
-              </div>
-
-              {/* Right Side - Form */}
-              <div className="appointment-form-box">
-                <form className="appointment-form">
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label>First Name</label>
-                      <input type="text" placeholder="First Name" required />
-                    </div>
-                    <div className="form-group">
-                      <label>Last Name</label>
-                      <input type="text" placeholder="Last Name" required />
-                    </div>
-                  </div>
-
-                  <div className="form-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="Email Address" required />
-                  </div>
-
-                  <div className="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" placeholder="Phone Number" required />
-                  </div>
-
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label>Service</label>
-                      <select required>
-                        <option value="">Select Service</option>
-                        <option value="weight-loss">Weight Loss</option>
-                        <option value="pcod">PCOD Management</option>
-                        <option value="wedding">Wedding Plan</option>
-                        <option value="therapeutic">Therapeutic</option>
-                      </select>
-                    </div>
-                    <div className="form-group">
-                      <label>Preferred Date</label>
-                      <input type="date" required />
-                    </div>
-                  </div>
-
-                  <Button type="submit">Book An Appointment</Button>
-                </form>
-              </div>
-            </div>
-          </div>
+          <AppointmentBookingForm />
         </div>
       </section>
     </>
