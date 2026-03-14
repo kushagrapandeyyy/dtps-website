@@ -20,6 +20,12 @@ import {
   ShoppingCart,
   CreditCard,
   ImageIcon,
+  Megaphone,
+  LayoutTemplate,
+  MessageSquare,
+  Award,
+  Trophy,
+  Quote,
 } from 'lucide-react';
 import {
   DropdownMenu,
@@ -38,7 +44,13 @@ const sidebarItems = [
   { name: 'Payments', href: '/admin/payments', icon: CreditCard },
   { name: 'Pricing Plans', href: '/admin/pricing', icon: DollarSign },
   { name: 'Plan Banners', href: '/admin/plan-banners', icon: ImageIcon },
+  { name: 'Banners', href: '/admin/banners', icon: Megaphone },
+  { name: 'Page Heroes', href: '/admin/page-heroes', icon: LayoutTemplate },
+  { name: 'Popups', href: '/admin/popups', icon: MessageSquare },
   { name: 'Transformations', href: '/admin/transformations', icon: Images },
+  { name: 'Success Stories', href: '/admin/success-stories', icon: Trophy },
+  { name: 'Testimonials', href: '/admin/testimonials', icon: Quote },
+  { name: 'Recognition', href: '/admin/recognition', icon: Award },
   { name: 'Blog Posts', href: '/admin/blogs', icon: Newspaper },
   { name: 'Settings', href: '/admin/settings', icon: Settings },
 ];
@@ -53,7 +65,7 @@ export default function AdminLayout({
   const pathname = usePathname();
 
   let theme: 'dark' | 'light' = 'dark';
-  let toggleTheme: () => void = () => {};
+  let toggleTheme: () => void = () => { };
 
   try {
     const themeContext = useTheme();
@@ -107,11 +119,10 @@ export default function AdminLayout({
             return (
               <Link key={item.href} href={item.href}>
                 <div
-                  className={`flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 ${
-                    isActive
-                      ? `${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-400 border-l-2 border-emerald-500' : 'bg-emerald-50 text-emerald-600 border-l-2 border-emerald-500'}`
-                      : `${theme === 'dark' ? 'text-slate-400 hover:bg-slate-700/50 hover:text-slate-300' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`
-                  }`}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all duration-200 ${isActive
+                    ? `${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-400 border-l-2 border-emerald-500' : 'bg-emerald-50 text-emerald-600 border-l-2 border-emerald-500'}`
+                    : `${theme === 'dark' ? 'text-slate-400 hover:bg-slate-700/50 hover:text-slate-300' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`
+                    }`}
                 >
                   <Icon className="w-5 h-5 flex-shrink-0" />
                   <span className="text-sm font-medium">{item.name}</span>
@@ -200,11 +211,10 @@ export default function AdminLayout({
                       return (
                         <Link key={item.href} href={item.href}>
                           <div
-                            className={`flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all ${
-                              isActive
-                                ? `${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-400 border-l-2 border-emerald-500' : 'bg-emerald-50 text-emerald-600 border-l-2 border-emerald-500'}`
-                                : `${theme === 'dark' ? 'text-slate-400 hover:bg-slate-700/50 hover:text-slate-300' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`
-                            }`}
+                            className={`flex items-center gap-3 px-4 py-3 rounded-lg mb-1 transition-all ${isActive
+                              ? `${theme === 'dark' ? 'bg-emerald-500/20 text-emerald-400 border-l-2 border-emerald-500' : 'bg-emerald-50 text-emerald-600 border-l-2 border-emerald-500'}`
+                              : `${theme === 'dark' ? 'text-slate-400 hover:bg-slate-700/50 hover:text-slate-300' : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'}`
+                              }`}
                           >
                             <Icon className="w-5 h-5" />
                             <span className="text-sm font-medium">{item.name}</span>
