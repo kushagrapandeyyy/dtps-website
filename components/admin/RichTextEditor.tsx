@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import type { ComponentType } from 'react';
 
 type ReactQuillProps = {
@@ -12,10 +12,20 @@ type ReactQuillProps = {
   theme?: string;
 };
 
-const ReactQuill = dynamic(async () => {
-  const { default: Quill } = await import('react-quill');
-  return Quill;
-}, { ssr: false }) as unknown as ComponentType<ReactQuillProps>;
+const ReactQuill = dynamic(
+  async () => {
+    const { default: Quill } = await import('react-quill');
+    return Quill;
+  },
+  { 
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[200px] bg-slate-700 border border-slate-600 rounded-lg animate-pulse flex items-center justify-center">
+        <span className="text-slate-400">Loading editor...</span>
+      </div>
+    ),
+  }
+) as unknown as ComponentType<ReactQuillProps>;
 
 interface RichTextEditorProps {
   value: string;
@@ -38,6 +48,12 @@ export default function RichTextEditor({
   required = false,
   name,
 }: RichTextEditorProps) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const modules = useMemo(
     () => ({
       toolbar: [
@@ -52,11 +68,21 @@ export default function RichTextEditor({
     []
   );
 
+  if (!mounted) {
+    return (
+      <div className={`rte rte-${size} ${theme === 'dark' ? 'rte-dark' : 'rte-light'} ${className}`}>
+        <div className="w-full h-[200px] bg-slate-700 border border-slate-600 rounded-lg animate-pulse flex items-center justify-center">
+          <span className="text-slate-400">Loading editor...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={`rte rte-${size} ${theme === 'dark' ? 'rte-dark' : 'rte-light'} ${className}`}>
       <ReactQuill
         theme="snow"
-        value={value}
+        value={value || ''}
         onChange={onChange}
         placeholder={placeholder}
         modules={modules}
@@ -65,7 +91,7 @@ export default function RichTextEditor({
         <input
           type="text"
           name={name}
-          value={value}
+          value={value || ''}
           readOnly
           required
           className="sr-only"

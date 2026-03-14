@@ -241,11 +241,14 @@ export default function BlogsPage() {
             </Button>
           </DialogTrigger>
 
-          <DialogContent className={`${
-            theme === 'dark'
-              ? 'bg-slate-800 border-slate-700'
-              : 'bg-white border-slate-200'
-          } max-w-4xl max-h-[90vh] overflow-y-auto`}>
+          <DialogContent 
+            className={`${
+              theme === 'dark'
+                ? 'bg-slate-800 border-slate-700'
+                : 'bg-white border-slate-200'
+            } max-w-4xl max-h-[90vh] overflow-y-auto`}
+            onOpenAutoFocus={(e) => e.preventDefault()}
+          >
             <DialogHeader>
               <DialogTitle className={theme === 'dark' ? 'text-white' : 'text-slate-900'}>
                 {editingId ? 'Edit Blog Post' : 'Create New Blog Post'}
