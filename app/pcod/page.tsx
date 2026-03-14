@@ -15,11 +15,11 @@ const whatYouGet = [
 ];
 
 const gkkBenefits = [
-  { title: 'Inflammation down', desc: 'Less bloating, less pain, better skin' },
-  { title: 'Hormones Balanced', desc: 'Regular cycles, better mood' },
-  { title: 'Energy Boost', desc: 'Feel more active and vibrant' },
-  { title: 'Weight Loss', desc: 'Sustainable and healthy reduction' },
-  { title: 'Better Skin', desc: 'Clear, glowing, and healthy' },
+  { title: 'Inflammation down', desc: 'Less bloating, less pain, better skin', icon: '/images/inflam.png' },
+  { title: 'Hormones Balanced', desc: 'Regular cycles, better mood', icon: '/images/detox.png' },
+  { title: 'Energy Boost', desc: 'Feel more active and vibrant', icon: '/images/maintain.png' },
+  { title: 'Weight Loss', desc: 'Sustainable and healthy reduction', icon: '/images/fat burning.png' },
+  { title: 'Better Skin', desc: 'Clear, glowing, and healthy', icon: '/images/metabolic.png' },
 ];
 
 export default function PCODPage() {

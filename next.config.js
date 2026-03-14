@@ -1,14 +1,38 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  turbopack: {
+    root: __dirname,
+  },
   images: {
-    domains: [
-      'staging.dtpoonamsagar.com',
-      'randomuser.me',
-      'placehold.co',
-      'img.youtube.com',
-      'www.dtpoonamsagar.com',
-      'dtpoonamsagar.com',
-      'ik.imagekit.io'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'staging.dtpoonamsagar.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'randomuser.me',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.dtpoonamsagar.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'dtpoonamsagar.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ik.imagekit.io',
+      },
     ],
   },
 };
